@@ -4,101 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Activités | MUSARDE</title>
-  <style>
-    :root {
-      --vert-pin: #2F3E34;
-      --sable: #EFEAE4;
-      --bleu-grise: #7A9096;
-      --soleil: #D9B86A;
-      --blanc-casse: #F8F6F2;
-      --texte: #2F3E34;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--sable);
-      color: var(--texte);
-      line-height: 1.6;
-    }
-
-    .topbar {
-      background: var(--vert-pin);
-      padding: 18px 20px;
-    }
-
-    .topbar-inner {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      font-size: 1.4rem;
-      font-weight: bold;
-      letter-spacing: 3px;
-      color: white;
-      text-decoration: none;
-    }
-
-    nav {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 8px 10px;
-      border-radius: 8px;
-    }
-
-    nav a:hover,
-    nav a.active {
-      background: var(--soleil);
-      color: var(--vert-pin);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 70px 20px;
-    }
-
-    h1, h2 {
-      color: var(--vert-pin);
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-      margin-top: 24px;
-    }
-
-    .card {
-      background: var(--blanc-casse);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 6px 18px rgba(47, 62, 52, 0.08);
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background: var(--vert-pin);
-      color: var(--sable);
-      font-size: 0.95rem;
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -115,37 +21,41 @@
   </div>
 
   <main>
-    <h1>Activités autour de MUSARDE</h1>
-    <p>
-      Cette page a vocation à devenir un petit guide local pour aider les voyageurs
-      à profiter pleinement de leur séjour à Ychoux et dans les Landes.
-    </p>
+    <div class="page-header">
+      <h1>Activités autour de MUSARDE</h1>
+      <p>
+        Un futur guide local pour profiter pleinement de Ychoux et des Landes.
+      </p>
+    </div>
 
     <div class="card-grid">
       <div class="card">
-        <h2>Nature</h2>
+        <h3>Nature</h3>
         <p>Forêts, balades, pistes cyclables et grands espaces landais.</p>
       </div>
 
       <div class="card">
-        <h2>Lacs</h2>
+        <h3>Lacs</h3>
         <p>Baignade, détente, activités nautiques et journées en famille.</p>
       </div>
 
       <div class="card">
-        <h2>Océan</h2>
-        <p>Plages, surf, promenades et ambiance estivale de la côte landaise.</p>
+        <h3>Océan</h3>
+        <p>Plages, surf, promenades et lumière estivale de la côte landaise.</p>
       </div>
 
       <div class="card">
-        <h2>Bonnes adresses</h2>
+        <h3>Bonnes adresses</h3>
         <p>Restaurants, commerces, marchés et idées de sorties à proximité.</p>
       </div>
     </div>
   </main>
 
   <footer>
-    © MUSARDE – Maison de vacances à Ychoux
+    <div class="footer-inner">
+      <p>© MUSARDE – Maison de vacances à Ychoux</p>
+      <p class="footer-signature">Des idées pour vivre le territoire</p>
+    </div>
   </footer>
 
 </body>
