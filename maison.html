@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La maison | MUSARDE</title>
+  <style>
+    :root {
+      --vert-pin: #2F3E34;
+      --sable: #EFEAE4;
+      --bleu-grise: #7A9096;
+      --soleil: #D9B86A;
+      --blanc-casse: #F8F6F2;
+      --texte: #2F3E34;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--sable);
+      color: var(--texte);
+      line-height: 1.6;
+    }
+
+    .topbar {
+      background: var(--vert-pin);
+      padding: 18px 20px;
+    }
+
+    .topbar-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 8px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: var(--soleil);
+      color: var(--vert-pin);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    h1, h2 {
+      color: var(--vert-pin);
+    }
+
+    .box {
+      background: var(--blanc-casse);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(47, 62, 52, 0.08);
+      margin-top: 24px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--vert-pin);
+      color: var(--sable);
+      font-size: 0.95rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="logo">MUSARDE</a>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="maison.html" class="active">La maison</a>
+        <a href="activites.html">Activités</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <h1>La maison</h1>
+
+    <div class="box">
+      <p>
+        Cette page présentera prochainement la maison en détail : capacité d’accueil,
+        pièces, équipements, ambiance, extérieur et informations pratiques.
+      </p>
+      <p>
+        En attendant les photos, nous pouvons déjà y intégrer ensuite :
+        nombre de couchages, description des chambres, terrasse, jardin,
+        stationnement, wifi, équipements de cuisine, etc.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    © MUSARDE – Maison de vacances à Ychoux
+  </footer>
+
+</body>
+</html>
