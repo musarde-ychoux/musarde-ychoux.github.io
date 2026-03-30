@@ -83,12 +83,15 @@ nav a.active {
 }
 
 .hero {
-  min-height: 72vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   background:
-    linear-gradient(rgba(47, 62, 52, 0.50), rgba(47, 62, 52, 0.42)),
-    linear-gradient(120deg, #6f8489 0%, #2f3e34 100%);
+    linear-gradient(rgba(47, 62, 52, 0.55), rgba(47, 62, 52, 0.45)),
+    url("images/musarde-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
 }
 
