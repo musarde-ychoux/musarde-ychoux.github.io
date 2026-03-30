@@ -5,6 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Activités | MUSARDE</title>
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .activities-intro {
+      max-width: 900px;
+    }
+
+    .activities-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .activities-menu a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--blanc-casse);
+      color: var(--vert-pin);
+      border: 1px solid rgba(47, 62, 52, 0.08);
+      box-shadow: var(--ombre-legere);
+      font-weight: 600;
+      transition: 0.25s ease;
+    }
+
+    .activities-menu a:hover {
+      background: var(--soleil);
+      color: var(--vert-pin);
+    }
+
+    .activity-section {
+      padding-top: 32px;
+    }
+
+    .activity-section h2 {
+      margin-bottom: 12px;
+    }
+
+    .activity-section-intro {
+      max-width: 900px;
+      margin-bottom: 26px;
+    }
+
+    .tips-box {
+      background: rgba(217, 184, 106, 0.12);
+      border-left: 5px solid var(--soleil);
+      border-radius: 16px;
+      padding: 22px;
+      margin-top: 28px;
+    }
+
+    .tips-box h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--vert-pin);
+      font-size: 1.3rem;
+    }
+
+    .tips-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .map-box {
+      background: var(--blanc-casse);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--ombre-legere);
+      margin-top: 32px;
+    }
+
+    .map-placeholder {
+      margin-top: 18px;
+      background: linear-gradient(135deg, rgba(122, 144, 150, 0.18), rgba(47, 62, 52, 0.10));
+      border: 1px dashed rgba(47, 62, 52, 0.20);
+      border-radius: 18px;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      color: var(--vert-pin);
+      font-weight: 600;
+    }
+
+    .activity-card-meta {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 0.95rem;
+      color: var(--bleu-grise);
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
 
@@ -23,32 +116,214 @@
   <main>
     <div class="page-header">
       <h1>Activités autour de MUSARDE</h1>
-      <p>
-        Un futur guide local pour profiter pleinement de Ychoux et des Landes.
+      <p class="activities-intro">
+        Cette page a vocation à devenir un véritable guide local pour aider les voyageurs à profiter pleinement de leur séjour à Ychoux et dans les Landes. L’objectif n’est pas seulement de proposer une liste de lieux, mais de partager de bonnes idées, des repères utiles et quelques conseils pratiques pour mieux organiser ses journées.
       </p>
-    </div>
 
-    <div class="card-grid">
-      <div class="card">
-        <h3>Nature</h3>
-        <p>Forêts, balades, pistes cyclables et grands espaces landais.</p>
-      </div>
-
-      <div class="card">
-        <h3>Lacs</h3>
-        <p>Baignade, détente, activités nautiques et journées en famille.</p>
-      </div>
-
-      <div class="card">
-        <h3>Océan</h3>
-        <p>Plages, surf, promenades et lumière estivale de la côte landaise.</p>
-      </div>
-
-      <div class="card">
-        <h3>Bonnes adresses</h3>
-        <p>Restaurants, commerces, marchés et idées de sorties à proximité.</p>
+      <div class="activities-menu">
+        <a href="#nature">Nature & balades</a>
+        <a href="#lacs">Lacs & baignade</a>
+        <a href="#ocean">Océan & plages</a>
+        <a href="#restaurants">Restaurants & bonnes adresses</a>
+        <a href="#visites">Lieux à visiter</a>
+        <a href="#carte">Carte du secteur</a>
       </div>
     </div>
+
+    <section id="nature" class="activity-section">
+      <h2>Nature & balades</h2>
+      <p class="activity-section-intro">
+        La région offre un cadre idéal pour ralentir, se promener et profiter de l’ambiance très particulière de la forêt landaise. Cette rubrique peut accueillir des idées de balades à pied, de sorties à vélo et de coins agréables pour prendre l’air.
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Balades en forêt</h3>
+          <p>
+            Une rubrique pour recenser les chemins agréables, les secteurs ombragés et les promenades faciles à faire en couple ou en famille.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : moment idéal dans la journée</span>
+        </div>
+
+        <div class="card">
+          <h3>Pistes cyclables</h3>
+          <p>
+            Tu pourras y indiquer les accès pratiques, les itinéraires simples et les parcours adaptés à des sorties tranquilles.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : durée approximative</span>
+        </div>
+
+        <div class="card">
+          <h3>Coins calmes</h3>
+          <p>
+            Une sélection de lieux pour ceux qui cherchent surtout la tranquillité, le calme et un vrai moment de respiration.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : fréquentation et stationnement</span>
+        </div>
+      </div>
+
+      <div class="tips-box">
+        <h3>Conseil MUSARDE</h3>
+        <p>
+          Cette catégorie sera particulièrement utile si tu ajoutes des remarques concrètes, par exemple : agréable le matin, peu ombragé l’après-midi, parfait avec de jeunes enfants, ou encore mieux après une journée chaude.
+        </p>
+      </div>
+    </section>
+
+    <section id="lacs" class="activity-section">
+      <h2>Lacs & baignade</h2>
+      <p class="activity-section-intro">
+        Les lacs sont souvent une excellente option pour les familles et pour les voyageurs qui recherchent une baignade plus calme que l’océan. Cette rubrique pourra mettre en avant les plages de lac, les activités nautiques douces et les secteurs faciles d’accès.
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Baignade en famille</h3>
+          <p>
+            Une sélection des endroits les plus adaptés pour passer une journée agréable avec une eau plus calme et une ambiance détendue.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : profondeur, ombre, accès</span>
+        </div>
+
+        <div class="card">
+          <h3>Paddle & loisirs nautiques</h3>
+          <p>
+            Tu pourras y regrouper les activités douces, les locations et les idées simples pour profiter du lac autrement.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : durée et réservation</span>
+        </div>
+
+        <div class="card">
+          <h3>Journées détente</h3>
+          <p>
+            Une rubrique pensée pour orienter ceux qui veulent surtout bronzer, pique-niquer, se baigner et passer une journée sans stress.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : meilleur horaire</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="ocean" class="activity-section">
+      <h2>Océan & plages</h2>
+      <p class="activity-section-intro">
+        L’océan fait évidemment partie des grands attraits du secteur. Cette partie peut rassembler les plages que tu recommandes, les coins pour le surf, les promenades au coucher du soleil et les conseils pratiques pour éviter les déconvenues.
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Plages à découvrir</h3>
+          <p>
+            Tu pourras y distinguer les plages les plus connues, celles qui sont plus faciles d’accès et celles qui valent le détour pour l’ambiance.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : parking, affluence, ambiance</span>
+        </div>
+
+        <div class="card">
+          <h3>Surf & bord de mer</h3>
+          <p>
+            Une rubrique pour orienter ceux qui veulent prendre un cours, louer du matériel ou simplement profiter de l’énergie de l’océan.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : niveau conseillé</span>
+        </div>
+
+        <div class="card">
+          <h3>Fin de journée</h3>
+          <p>
+            Une catégorie idéale pour recommander les meilleurs spots de coucher de soleil ou les promenades à faire en soirée.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : heure conseillée</span>
+        </div>
+      </div>
+
+      <div class="tips-box">
+        <h3>Conseil MUSARDE</h3>
+        <p>
+          Ici, tes remarques personnelles auront beaucoup de valeur. Par exemple : plage magnifique mais très fréquentée en août, accès un peu long mais cela vaut vraiment le coup, ou encore spot très agréable en fin de journée.
+        </p>
+      </div>
+    </section>
+
+    <section id="restaurants" class="activity-section">
+      <h2>Restaurants & bonnes adresses</h2>
+      <p class="activity-section-intro">
+        Cette catégorie peut devenir l’une des plus appréciées. Les voyageurs aiment beaucoup avoir quelques adresses fiables, simples et testées, plutôt qu’une liste interminable de lieux anonymes.
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Restaurants</h3>
+          <p>
+            Une sélection resserrée de tables que tu recommandes pour leur cadre, leur cuisine ou leur bon rapport qualité prix.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : réservation conseillée ou non</span>
+        </div>
+
+        <div class="card">
+          <h3>Marchés & produits locaux</h3>
+          <p>
+            Tu pourras y indiquer les marchés sympathiques, les jours intéressants et les bonnes idées pour acheter local.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : jour et horaires</span>
+        </div>
+
+        <div class="card">
+          <h3>Courses & dépannage</h3>
+          <p>
+            Une rubrique très utile pour signaler les commerces pratiques, les boulangeries, les supermarchés et les solutions du quotidien.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : le plus proche et le plus pratique</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="visites" class="activity-section">
+      <h2>Lieux à visiter</h2>
+      <p class="activity-section-intro">
+        Cette partie pourra proposer quelques idées de sorties pour ceux qui aiment découvrir davantage la région, même au-delà des activités balnéaires. L’idée est de suggérer des escapades intéressantes sans trop disperser les vacanciers.
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Incontournables</h3>
+          <p>
+            Quelques lieux emblématiques à découvrir au moins une fois pendant le séjour.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : vaut le détour ou non</span>
+        </div>
+
+        <div class="card">
+          <h3>Sorties en famille</h3>
+          <p>
+            Des idées adaptées aux enfants et aux journées où l’on veut changer de rythme sans partir trop loin.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : âge idéal</span>
+        </div>
+
+        <div class="card">
+          <h3>Escapades à la journée</h3>
+          <p>
+            Une rubrique pour les vacanciers qui souhaitent consacrer une journée complète à une découverte plus large du territoire.
+          </p>
+          <span class="activity-card-meta">Astuce à ajouter : temps de trajet</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="carte" class="activity-section">
+      <div class="map-box">
+        <h2>Carte du secteur</h2>
+        <p>
+          Oui, une carte peut être très utile. Le plus pertinent serait probablement une carte Google My Maps, avec des repères classés par thématique. Cela permettrait aux voyageurs de visualiser rapidement les distances, de repérer les regroupements de lieux et de préparer leurs sorties plus facilement.
+        </p>
+        <p>
+          Tu pourrais par exemple distinguer les catégories avec des couleurs différentes pour la nature, les lacs, l’océan, les restaurants et les visites.
+        </p>
+
+        <div class="map-placeholder">
+          Emplacement réservé pour une future carte Google My Maps intégrée
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
