@@ -219,30 +219,33 @@
       .subfilter-menu {
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
-        margin: 24px 0 28px 0;
+        gap: 14px;
+        margin: 28px 0 32px 0;
       }
       
       .subfilter-btn {
         border: none;
         cursor: pointer;
-        padding: 10px 16px;
+        padding: 12px 18px;
         border-radius: 999px;
-        background: rgba(122, 144, 150, 0.12);
+        background: white;
         color: var(--vert-pin);
-        border: 1px solid rgba(47, 62, 52, 0.08);
+        border: 1px solid rgba(47, 62, 52, 0.12);
+        box-shadow: 0 6px 18px rgba(47, 62, 52, 0.08);
         font-weight: 700;
-        font-size: 0.95rem;
+        font-size: 1rem;
         transition: 0.25s ease;
       }
       
       .subfilter-btn:hover {
-        background: rgba(217, 184, 106, 0.20);
+        background: rgba(217, 184, 106, 0.22);
+        transform: translateY(-1px);
       }
       
       .subfilter-btn.active {
         background: var(--soleil);
         color: var(--vert-pin);
+        box-shadow: 0 8px 22px rgba(47, 62, 52, 0.12);
       }
       
       .subfilter-panel {
