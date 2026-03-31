@@ -216,6 +216,43 @@
         height: 190px;
       }
     }
+      .subfilter-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 24px 0 28px 0;
+      }
+      
+      .subfilter-btn {
+        border: none;
+        cursor: pointer;
+        padding: 10px 16px;
+        border-radius: 999px;
+        background: rgba(122, 144, 150, 0.12);
+        color: var(--vert-pin);
+        border: 1px solid rgba(47, 62, 52, 0.08);
+        font-weight: 700;
+        font-size: 0.95rem;
+        transition: 0.25s ease;
+      }
+      
+      .subfilter-btn:hover {
+        background: rgba(217, 184, 106, 0.20);
+      }
+      
+      .subfilter-btn.active {
+        background: var(--soleil);
+        color: var(--vert-pin);
+      }
+      
+      .subfilter-panel {
+        display: none;
+        animation: fadeIn 0.25s ease;
+      }
+      
+      .subfilter-panel.active {
+        display: block;
+      }
   </style>
 </head>
 <body>
@@ -468,194 +505,376 @@
       </div>
     </section>
 
-    <section id="marches" class="category-panel">
-      <div class="category-header">
-        <h2>Marchés</h2>
-        <p>
-          Pour découvrir les produits locaux, profiter de l’ambiance estivale et flâner dans les villages voisins, les marchés sont une très belle façon de vivre le territoire pendant le séjour.
-        </p>
-      </div>
+<section id="marches" class="category-panel">
+  <div class="category-header">
+    <h2>Marchés</h2>
+    <p>
+      Pour découvrir les produits locaux, profiter de l’ambiance estivale et flâner dans les villages voisins, les marchés sont une très belle façon de vivre le territoire pendant le séjour.
+    </p>
+  </div>
 
-      <div class="places-grid">
-        <article class="place-card">
-          <img class="place-image" src="images/marche-ychoux.jpg" alt="Marché d’Ychoux">
-          <div class="place-content">
-            <h3>Marché d’Ychoux</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Ychoux</span>
-              <span class="place-tag">🕒 3 min</span>
-              <span class="place-tag">🗺️ 2,4 km</span>
-            </div>
-            <p class="place-text">
-              Mercredi matin (toute l'année) : Un petit marché pratique et agréable pour compléter ses courses de vacances, acheter quelques produits frais et profiter d’une ambiance locale simple.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> idéal pour un début de séjour ou pour préparer un déjeuner léger à la maison.
-            </p>
-            <a href="https://www.google.com/maps?q=Rue+Felix+Arnaudin+Ychoux" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
+  <div class="subfilter-menu">
+    <button class="subfilter-btn active" data-subtarget="marches-tous">Tous</button>
+    <button class="subfilter-btn" data-subtarget="marches-matin">Marchés du matin</button>
+    <button class="subfilter-btn" data-subtarget="marches-nocturnes">Marchés nocturnes</button>
+  </div>
+
+  <div id="marches-tous" class="subfilter-panel active">
+    <div class="places-grid">
+      <article class="place-card">
+        <img class="place-image" src="images/marche-ychoux.jpg" alt="Marché d’Ychoux">
+        <div class="place-content">
+          <h3>Marché d’Ychoux</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Ychoux</span>
+            <span class="place-tag">🕒 3 min</span>
+            <span class="place-tag">🗺️ 2,4 km</span>
           </div>
-        </article>
+          <p class="place-text">
+            Mercredi matin (toute l'année) : Un petit marché pratique et agréable pour compléter ses courses de vacances, acheter quelques produits frais et profiter d’une ambiance locale simple.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> idéal pour un début de séjour ou pour préparer un déjeuner léger à la maison.
+          </p>
+          <a href="https://www.google.com/maps?q=Rue+Felix+Arnaudin+Ychoux" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
 
-        <article class="place-card">
-          <img class="place-image" src="images/marche-parentis.jpg" alt="Marché de Parentis-en-Born">
-          <div class="place-content">
-            <h3>Marché de Parentis-en-Born</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Parentis-en-Born</span>
-              <span class="place-tag">🕒 11 min</span>
-              <span class="place-tag">🗺️ 11,3 km</span>
-            </div>
-            <p class="place-text">
-              Jeudi et dimanche matin (toute l'année) : Un marché plus développé, agréable pour flâner, faire quelques achats de produits locaux et prolonger la sortie dans le centre de Parentis.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> très bien pour ramener de quoi préparer un apéritif ou un dîner aux saveurs landaises.
-            </p>
-            <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
+      <article class="place-card">
+        <img class="place-image" src="images/marche-parentis.jpg" alt="Marché de Parentis-en-Born">
+        <div class="place-content">
+          <h3>Marché de Parentis-en-Born</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Parentis-en-Born</span>
+            <span class="place-tag">🕒 11 min</span>
+            <span class="place-tag">🗺️ 11,3 km</span>
           </div>
-        </article>
+          <p class="place-text">
+            Jeudi et dimanche matin (toute l'année) : Un marché plus développé, agréable pour flâner, faire quelques achats de produits locaux et prolonger la sortie dans le centre de Parentis.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> très bien pour ramener de quoi préparer un apéritif ou un dîner aux saveurs landaises.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
 
-        <article class="place-card">
-          <img class="place-image" src="images/marche-biscarosse-ville.png" alt="Marché de Biscarrosse-Ville">
-          <div class="place-content">
-            <h3>Marché de Biscarrosse-Ville</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Biscarrosse-Ville</span>
-              <span class="place-tag">🕒 21 min</span>
-              <span class="place-tag">🗺️ 20 km</span>
-            </div>
-            <p class="place-text">
-              Vendredi et samedi matin (toute l'année) : Un marché vivant et généreux, idéal pour découvrir les produits locaux, les spécialités landaises et l’ambiance typique du secteur.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> parfait pour flâner le matin avant de poursuivre vers le lac ou l’océan.
-            </p>
-            <a href="https://www.google.com/maps?q=Place+du+Marche+Biscarrosse" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
+      <article class="place-card">
+        <img class="place-image" src="images/marche-biscarosse-ville.png" alt="Marché de Biscarrosse-Ville">
+        <div class="place-content">
+          <h3>Marché de Biscarrosse-Ville</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Biscarrosse-Ville</span>
+            <span class="place-tag">🕒 21 min</span>
+            <span class="place-tag">🗺️ 20 km</span>
           </div>
-        </article>
+          <p class="place-text">
+            Vendredi et samedi matin (toute l'année) : Un marché vivant et généreux, idéal pour découvrir les produits locaux, les spécialités landaises et l’ambiance typique du secteur.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> parfait pour flâner le matin avant de poursuivre vers le lac ou l’océan.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+du+Marche+Biscarrosse" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
 
-        <article class="place-card">
-          <img class="place-image" src="images/marche-bisca-plage.jpg" alt="Marché de Biscarrosse-Plage">
-          <div class="place-content">
-            <h3>Marché de Biscarrosse-Plage</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Biscarrosse-Plage</span>
-              <span class="place-tag">🕒 35 min</span>
-              <span class="place-tag">🗺️ 30 km</span>
-            </div>
-            <p class="place-text">
-              Samedi matin toute l'année & tous les matin sauf jeudi l'été : Un marché très agréable en bord de station balnéaire, parfait pour mêler ambiance vacances, produits frais et promenade côté océan.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> une très bonne idée avant une journée plage.
-            </p>
-            <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
+      <article class="place-card">
+        <img class="place-image" src="images/marche-bisca-plage.jpg" alt="Marché de Biscarrosse-Plage">
+        <div class="place-content">
+          <h3>Marché de Biscarrosse-Plage</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Biscarrosse-Plage</span>
+            <span class="place-tag">🕒 35 min</span>
+            <span class="place-tag">🗺️ 30 km</span>
           </div>
-        </article>
+          <p class="place-text">
+            Samedi matin toute l'année & tous les matins sauf jeudi l'été : Un marché très agréable en bord de station balnéaire, parfait pour mêler ambiance vacances, produits frais et promenade côté océan.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> une très bonne idée avant une journée plage.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
 
-        <article class="place-card">
-          <img class="place-image" src="images/marche-sanguinet.png" alt="Marché de Sanguinet">
-          <div class="place-content">
-            <h3>Marché de Sanguinet</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Sanguinet</span>
-              <span class="place-tag">🕒 16 min</span>
-              <span class="place-tag">🗺️ 18 km</span>
-            </div>
-            <p class="place-text">
-              Samedi matin toute l'année & mercredi matin en plus l'été : Un marché agréable et facile d’accès, parfait pour compléter ses courses de vacances tout en découvrant l’ambiance conviviale de Sanguinet.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> très sympa à combiner avec une sortie au lac.
-            </p>
-            <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
+      <article class="place-card">
+        <img class="place-image" src="images/marche-sanguinet.png" alt="Marché de Sanguinet">
+        <div class="place-content">
+          <h3>Marché de Sanguinet</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Sanguinet</span>
+            <span class="place-tag">🕒 16 min</span>
+            <span class="place-tag">🗺️ 18 km</span>
           </div>
-        </article>
-      </div>
+          <p class="place-text">
+            Samedi matin toute l'année & mercredi matin en plus l'été : Un marché agréable et facile d’accès, parfait pour compléter ses courses de vacances tout en découvrant l’ambiance conviviale de Sanguinet.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> très sympa à combiner avec une sortie au lac.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
 
-      <div class="section-note">
-        <h3>Marchés nocturnes</h3>
-        <p>
-          En été, plusieurs stations voisines proposent aussi des marchés du soir, très agréables pour se promener, boire un verre ou prolonger la journée dans une ambiance plus animée.
-        </p>
-      </div>
-
-      <div class="places-grid" style="margin-top: 28px;">
-        <article class="place-card">
-          <img class="place-image" src="images/marche-parentis-soir.jpg" alt="Marché nocturne de Parentis-en-Born">
-          <div class="place-content">
-            <h3>Marché nocturne de Parentis-en-Born</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Parentis-en-Born</span>
-              <span class="place-tag">🕒 11 min</span>
-              <span class="place-tag">🗺️ 11,3 km</span>
-            </div>
-            <p class="place-text">
-              Mardi soir en été : Un rendez-vous estival agréable pour profiter du centre-ville autrement, entre balade, achats et ambiance de vacances.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> parfait pour une sortie simple en soirée sans trop s’éloigner de la maison.
-            </p>
-            <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
+      <article class="place-card">
+        <img class="place-image" src="images/marche-parentis-soir.jpg" alt="Marché nocturne de Parentis-en-Born">
+        <div class="place-content">
+          <h3>Marché nocturne de Parentis-en-Born</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Parentis-en-Born</span>
+            <span class="place-tag">🕒 11 min</span>
+            <span class="place-tag">🗺️ 11,3 km</span>
           </div>
-        </article>
+          <p class="place-text">
+            Mardi soir en été : Un rendez-vous estival agréable pour profiter du centre-ville autrement, entre balade, achats et ambiance de vacances.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> parfait pour une sortie simple en soirée sans trop s’éloigner de la maison.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
 
-        <article class="place-card">
-          <img class="place-image" src="images/marche-biscarosse-plage.png" alt="Marché nocturne de Biscarrosse-Plage">
-          <div class="place-content">
-            <h3>Marché nocturne de Biscarrosse-Plage</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Biscarrosse-Plage</span>
-              <span class="place-tag">🕒 35 min</span>
-              <span class="place-tag">🗺️ 30 km</span>
-            </div>
-            <p class="place-text">
-              Tous les soirs l'été : Très apprécié en saison, ce marché du soir apporte une vraie ambiance vacances après la plage, avec stands variés et promenade animée.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> idéal pour finir la journée par une balade et une glace face à l’océan.
-            </p>
-            <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
+      <article class="place-card">
+        <img class="place-image" src="images/marche-biscarosse-plage.png" alt="Marché nocturne de Biscarrosse-Plage">
+        <div class="place-content">
+          <h3>Marché nocturne de Biscarrosse-Plage</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Biscarrosse-Plage</span>
+            <span class="place-tag">🕒 35 min</span>
+            <span class="place-tag">🗺️ 30 km</span>
           </div>
-        </article>
+          <p class="place-text">
+            Tous les soirs l'été : Très apprécié en saison, ce marché du soir apporte une vraie ambiance vacances après la plage, avec stands variés et promenade animée.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> idéal pour finir la journée par une balade et une glace face à l’océan.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
 
-        <article class="place-card">
-          <img class="place-image" src="images/marche-sanguinet-soir.jpg" alt="Marché nocturne de Sanguinet">
-          <div class="place-content">
-            <h3>Marché nocturne de Sanguinet</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Sanguinet</span>
-              <span class="place-tag">🕒 16 min</span>
-              <span class="place-tag">🗺️ 18 km</span>
-            </div>
-            <p class="place-text">
-              Mercredi & Samedi soir en été : Une sortie estivale très agréable, entre artisanat, flânerie et ambiance de vacances au cœur du bourg.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> parfait pour une soirée détendue après une journée au lac.
-            </p>
-            <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
+      <article class="place-card">
+        <img class="place-image" src="images/marche-sanguinet-soir.jpg" alt="Marché nocturne de Sanguinet">
+        <div class="place-content">
+          <h3>Marché nocturne de Sanguinet</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Sanguinet</span>
+            <span class="place-tag">🕒 16 min</span>
+            <span class="place-tag">🗺️ 18 km</span>
           </div>
-        </article>
-      </div>
-    </section>
+          <p class="place-text">
+            Mercredi & Samedi soir en été : Une sortie estivale très agréable, entre artisanat, flânerie et ambiance de vacances au cœur du bourg.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> parfait pour une soirée détendue après une journée au lac.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
 
+  <div id="marches-matin" class="subfilter-panel">
+    <div class="places-grid">
+      <article class="place-card">
+        <img class="place-image" src="images/marche-ychoux.jpg" alt="Marché d’Ychoux">
+        <div class="place-content">
+          <h3>Marché d’Ychoux</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Ychoux</span>
+            <span class="place-tag">🕒 3 min</span>
+            <span class="place-tag">🗺️ 2,4 km</span>
+          </div>
+          <p class="place-text">
+            Mercredi matin (toute l'année) : Un petit marché pratique et agréable pour compléter ses courses de vacances, acheter quelques produits frais et profiter d’une ambiance locale simple.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> idéal pour un début de séjour ou pour préparer un déjeuner léger à la maison.
+          </p>
+          <a href="https://www.google.com/maps?q=Rue+Felix+Arnaudin+Ychoux" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <img class="place-image" src="images/marche-parentis.jpg" alt="Marché de Parentis-en-Born">
+        <div class="place-content">
+          <h3>Marché de Parentis-en-Born</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Parentis-en-Born</span>
+            <span class="place-tag">🕒 11 min</span>
+            <span class="place-tag">🗺️ 11,3 km</span>
+          </div>
+          <p class="place-text">
+            Jeudi et dimanche matin (toute l'année) : Un marché plus développé, agréable pour flâner, faire quelques achats de produits locaux et prolonger la sortie dans le centre de Parentis.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> très bien pour ramener de quoi préparer un apéritif ou un dîner aux saveurs landaises.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <img class="place-image" src="images/marche-biscarosse-ville.png" alt="Marché de Biscarrosse-Ville">
+        <div class="place-content">
+          <h3>Marché de Biscarrosse-Ville</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Biscarrosse-Ville</span>
+            <span class="place-tag">🕒 21 min</span>
+            <span class="place-tag">🗺️ 20 km</span>
+          </div>
+          <p class="place-text">
+            Vendredi et samedi matin (toute l'année) : Un marché vivant et généreux, idéal pour découvrir les produits locaux, les spécialités landaises et l’ambiance typique du secteur.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> parfait pour flâner le matin avant de poursuivre vers le lac ou l’océan.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+du+Marche+Biscarrosse" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <img class="place-image" src="images/marche-bisca-plage.jpg" alt="Marché de Biscarrosse-Plage">
+        <div class="place-content">
+          <h3>Marché de Biscarrosse-Plage</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Biscarrosse-Plage</span>
+            <span class="place-tag">🕒 35 min</span>
+            <span class="place-tag">🗺️ 30 km</span>
+          </div>
+          <p class="place-text">
+            Samedi matin toute l'année & tous les matins sauf jeudi l'été : Un marché très agréable en bord de station balnéaire, parfait pour mêler ambiance vacances, produits frais et promenade côté océan.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> une très bonne idée avant une journée plage.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <img class="place-image" src="images/marche-sanguinet.png" alt="Marché de Sanguinet">
+        <div class="place-content">
+          <h3>Marché de Sanguinet</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Sanguinet</span>
+            <span class="place-tag">🕒 16 min</span>
+            <span class="place-tag">🗺️ 18 km</span>
+          </div>
+          <p class="place-text">
+            Samedi matin toute l'année & mercredi matin en plus l'été : Un marché agréable et facile d’accès, parfait pour compléter ses courses de vacances tout en découvrant l’ambiance conviviale de Sanguinet.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> très sympa à combiner avec une sortie au lac.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div id="marches-nocturnes" class="subfilter-panel">
+    <div class="section-note">
+      <h3>Marchés nocturnes</h3>
+      <p>
+        En été, plusieurs stations voisines proposent aussi des marchés du soir, très agréables pour se promener, boire un verre ou prolonger la journée dans une ambiance plus animée.
+      </p>
+    </div>
+
+    <div class="places-grid" style="margin-top: 28px;">
+      <article class="place-card">
+        <img class="place-image" src="images/marche-parentis-soir.jpg" alt="Marché nocturne de Parentis-en-Born">
+        <div class="place-content">
+          <h3>Marché nocturne de Parentis-en-Born</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Parentis-en-Born</span>
+            <span class="place-tag">🕒 11 min</span>
+            <span class="place-tag">🗺️ 11,3 km</span>
+          </div>
+          <p class="place-text">
+            Mardi soir en été : Un rendez-vous estival agréable pour profiter du centre-ville autrement, entre balade, achats et ambiance de vacances.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> parfait pour une sortie simple en soirée sans trop s’éloigner de la maison.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <img class="place-image" src="images/marche-biscarosse-plage.png" alt="Marché nocturne de Biscarrosse-Plage">
+        <div class="place-content">
+          <h3>Marché nocturne de Biscarrosse-Plage</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Biscarrosse-Plage</span>
+            <span class="place-tag">🕒 35 min</span>
+            <span class="place-tag">🗺️ 30 km</span>
+          </div>
+          <p class="place-text">
+            Tous les soirs l'été : Très apprécié en saison, ce marché du soir apporte une vraie ambiance vacances après la plage, avec stands variés et promenade animée.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> idéal pour finir la journée par une balade et une glace face à l’océan.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <img class="place-image" src="images/marche-sanguinet-soir.jpg" alt="Marché nocturne de Sanguinet">
+        <div class="place-content">
+          <h3>Marché nocturne de Sanguinet</h3>
+          <div class="place-meta">
+            <span class="place-tag">📌 Sanguinet</span>
+            <span class="place-tag">🕒 16 min</span>
+            <span class="place-tag">🗺️ 18 km</span>
+          </div>
+          <p class="place-text">
+            Mercredi & Samedi soir en été : Une sortie estivale très agréable, entre artisanat, flânerie et ambiance de vacances au cœur du bourg.
+          </p>
+          <p class="place-tip">
+            <strong>Astuce :</strong> parfait pour une soirée détendue après une journée au lac.
+          </p>
+          <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
+            📍 Voir sur la carte
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+    
     <section id="courses" class="category-panel">
       <div class="category-header">
         <h2>Courses & boutiques</h2>
@@ -1017,6 +1236,24 @@
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
+        });
+      });
+    });
+    const subButtons = document.querySelectorAll('.subfilter-btn');
+    const subPanels = document.querySelectorAll('.subfilter-panel');
+  
+    subButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = button.getAttribute('data-subtarget');
+  
+        subButtons.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+  
+        subPanels.forEach((panel) => {
+          panel.classList.remove('active');
+          if (panel.id === target) {
+            panel.classList.add('active');
+          }
         });
       });
     });
