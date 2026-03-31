@@ -277,16 +277,111 @@
       </p>
 
       <div class="filter-menu">
+        <button class="filter-btn" data-target="visites">Lieux à visiter</button>
         <button class="filter-btn active" data-target="nature">Nature & balades</button>
         <button class="filter-btn" data-target="lacs">Lacs & baignades</button>
         <button class="filter-btn" data-target="marches">Marchés</button>
         <button class="filter-btn" data-target="courses">Courses & boutiques</button>
         <button class="filter-btn" data-target="restaurants">Restaurants & bars</button>
-        <button class="filter-btn" data-target="visites">Lieux à visiter</button>
         <button class="filter-btn" data-target="carte">Carte du secteur</button>
       </div>
     </div>
+    
+    <section id="visites" class="category-panel">
+      <div class="category-header">
+        <h2>Lieux à visiter</h2>
+        <p>
+          Une rubrique idéale pour suggérer quelques escapades et sorties intéressantes à faire pendant le séjour, selon l’envie et le temps disponible.
+        </p>
+      </div>
 
+      <div class="places-grid">
+        <article class="place-card">
+          <img class="place-image" src="images/dune-du-pilat.jpg" alt="Dune du Pilat">
+          <div class="place-content">
+            <h3>Dune du Pilat</h3>
+            <div class="place-meta">
+              <span class="place-tag">📌 Pyla-sur-Mer</span>
+              <span class="place-tag">🕒 39 min</span>
+              <span class="place-tag">🗺️ 42 km</span>
+            </div>
+            <p class="place-text">
+              La plus haute dune d’Europe, avec une vue spectaculaire sur l’océan, la forêt et le Bassin d’Arcachon. Une sortie incontournable si vous souhaitez découvrir l’un des sites majeurs du Sud-Ouest.
+            </p>
+            <p class="place-tip">
+              <strong>Astuce :</strong> à privilégier le matin ou en fin de journée pour éviter les fortes chaleurs et profiter des plus belles lumières.
+            </p>
+            <a href="https://www.google.com/maps?q=Dune+du+Pilat" target="_blank" class="map-button">
+              📍 Voir sur la carte
+            </a>
+          </div>
+        </article>
+
+        <article class="place-card">
+          <img class="place-image" src="images/les-cabanes-tchanque.jpg" alt="Cabanes Tchanquées du Bassin d’Arcachon">
+          <div class="place-content">
+            <h3>Cabanes Tchanquées et Île aux Oiseaux</h3>
+            <div class="place-meta">
+              <span class="place-tag">📌 Bassin d’Arcachon</span>
+              <span class="place-tag">🕒 42 min</span>
+              <span class="place-tag">🗺️ 42,8 km</span>
+            </div>
+            <p class="place-text">
+              Véritables symboles du Bassin d’Arcachon, les Cabanes Tchanquées font partie des images les plus célèbres de la région. Elles se découvrent surtout lors d’une sortie en bateau.
+            </p>
+            <p class="place-tip">
+              <strong>Astuce :</strong> idéal à combiner avec Arcachon ou une excursion sur le bassin pour une journée vraiment marquante.
+            </p>
+            <a href="https://www.google.com/maps?q=Cabanes+Tchanquees+Bassin+d+Arcachon" target="_blank" class="map-button">
+              📍 Voir sur la carte
+            </a>
+          </div>
+        </article>
+
+        <article class="place-card">
+          <img class="place-image" src="images/arcachon.jpg" alt="Arcachon">
+          <div class="place-content">
+            <h3>Arcachon</h3>
+            <div class="place-meta">
+              <span class="place-tag">📌 Arcachon</span>
+              <span class="place-tag">🕒 45 min</span>
+              <span class="place-tag">🗺️ 43 km</span>
+            </div>
+            <p class="place-text">
+              Une très belle escapade à la journée pour profiter du front de mer, des jetées, des commerces et de l’ambiance élégante du Bassin d’Arcachon.
+            </p>
+            <p class="place-tip">
+              <strong>Astuce :</strong> idéal pour alterner entre balade, déjeuner et bord de mer.
+            </p>
+            <a href="https://www.google.com/maps?q=Arcachon" target="_blank" class="map-button">
+              📍 Voir sur la carte
+            </a>
+          </div>
+        </article>
+
+        <article class="place-card">
+          <img class="place-image" src="images/muse-hydravion.jpg" alt="Musée de l’Hydraviation à Biscarrosse">
+          <div class="place-content">
+            <h3>Musée de l’Hydraviation</h3>
+            <div class="place-meta">
+              <span class="place-tag">📌 Biscarrosse</span>
+              <span class="place-tag">🕒 24 min</span>
+              <span class="place-tag">🗺️ 21,5 km</span>
+            </div>
+            <p class="place-text">
+              Une visite originale pour découvrir l’histoire des hydravions sur l’ancienne base Latécoère, entre patrimoine local et aventure aéronautique.
+            </p>
+            <p class="place-tip">
+              <strong>Astuce :</strong> très bonne option pour varier entre nature, plage et culture.
+            </p>
+            <a href="https://www.google.com/maps?q=Musee+de+l+Hydraviation+Biscarrosse" target="_blank" class="map-button">
+              📍 Voir sur la carte
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+    
     <section id="nature" class="category-panel active">
       <div class="category-header">
         <h2>Nature & balades</h2>
@@ -1090,101 +1185,6 @@
         <p>
           Lorsque tu commenceras à ajouter davantage d’adresses, on pourra très facilement enrichir cette rubrique avec 6, 8 ou 10 fiches, voire créer plus tard des sous-filtres comme “famille”, “rapide”, “plaisir” ou “local”.
         </p>
-      </div>
-    </section>
-
-    <section id="visites" class="category-panel">
-      <div class="category-header">
-        <h2>Lieux à visiter</h2>
-        <p>
-          Une rubrique idéale pour suggérer quelques escapades et sorties intéressantes à faire pendant le séjour, selon l’envie et le temps disponible.
-        </p>
-      </div>
-
-      <div class="places-grid">
-        <article class="place-card">
-          <img class="place-image" src="images/dune-du-pilat.jpg" alt="Dune du Pilat">
-          <div class="place-content">
-            <h3>Dune du Pilat</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Pyla-sur-Mer</span>
-              <span class="place-tag">🕒 39 min</span>
-              <span class="place-tag">🗺️ 42 km</span>
-            </div>
-            <p class="place-text">
-              La plus haute dune d’Europe, avec une vue spectaculaire sur l’océan, la forêt et le Bassin d’Arcachon. Une sortie incontournable si vous souhaitez découvrir l’un des sites majeurs du Sud-Ouest.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> à privilégier le matin ou en fin de journée pour éviter les fortes chaleurs et profiter des plus belles lumières.
-            </p>
-            <a href="https://www.google.com/maps?q=Dune+du+Pilat" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-
-        <article class="place-card">
-          <img class="place-image" src="images/les-cabanes-tchanque.jpg" alt="Cabanes Tchanquées du Bassin d’Arcachon">
-          <div class="place-content">
-            <h3>Cabanes Tchanquées et Île aux Oiseaux</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Bassin d’Arcachon</span>
-              <span class="place-tag">🕒 42 min</span>
-              <span class="place-tag">🗺️ 42,8 km</span>
-            </div>
-            <p class="place-text">
-              Véritables symboles du Bassin d’Arcachon, les Cabanes Tchanquées font partie des images les plus célèbres de la région. Elles se découvrent surtout lors d’une sortie en bateau.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> idéal à combiner avec Arcachon ou une excursion sur le bassin pour une journée vraiment marquante.
-            </p>
-            <a href="https://www.google.com/maps?q=Cabanes+Tchanquees+Bassin+d+Arcachon" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-
-        <article class="place-card">
-          <img class="place-image" src="images/arcachon.jpg" alt="Arcachon">
-          <div class="place-content">
-            <h3>Arcachon</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Arcachon</span>
-              <span class="place-tag">🕒 45 min</span>
-              <span class="place-tag">🗺️ 43 km</span>
-            </div>
-            <p class="place-text">
-              Une très belle escapade à la journée pour profiter du front de mer, des jetées, des commerces et de l’ambiance élégante du Bassin d’Arcachon.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> idéal pour alterner entre balade, déjeuner et bord de mer.
-            </p>
-            <a href="https://www.google.com/maps?q=Arcachon" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-
-        <article class="place-card">
-          <img class="place-image" src="images/muse-hydravion.jpg" alt="Musée de l’Hydraviation à Biscarrosse">
-          <div class="place-content">
-            <h3>Musée de l’Hydraviation</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Biscarrosse</span>
-              <span class="place-tag">🕒 24 min</span>
-              <span class="place-tag">🗺️ 21,5 km</span>
-            </div>
-            <p class="place-text">
-              Une visite originale pour découvrir l’histoire des hydravions sur l’ancienne base Latécoère, entre patrimoine local et aventure aéronautique.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> très bonne option pour varier entre nature, plage et culture.
-            </p>
-            <a href="https://www.google.com/maps?q=Musee+de+l+Hydraviation+Biscarrosse" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
       </div>
     </section>
 
