@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://musarde-ychoux.github.io/sitemap.xml
