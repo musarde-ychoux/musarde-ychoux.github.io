@@ -608,15 +608,20 @@
 
     <section id="lacs" class="category-panel">
       <div class="category-header">
-        <h2>Lacs, baignades & plages</h2>
+        <h2>Lacs & baignades</h2>
         <p>
           Que ce soit pour profiter de l’océan ou d’un lac plus calme, plusieurs spots permettent de s’adapter à toutes les envies : baignade, détente, surf ou moments en famille.
         </p>
       </div>
     
-      <div class="places-grid">
-
-        <!-- LACS -->
+      <div class="subfilter-menu">
+        <button class="subfilter-btn active" data-subtarget="lacs-tous">Tous</button>
+        <button class="subfilter-btn" data-subtarget="lacs-lacs">Lacs</button>
+        <button class="subfilter-btn" data-subtarget="lacs-ocean">Océan</button>
+      </div>
+    
+      <div id="lacs-tous" class="subfilter-panel active">
+        <div class="places-grid">
     
           <article class="place-card">
             <img class="place-image" src="images/lac-parentis.png" alt="Lac de Parentis">
@@ -638,7 +643,7 @@
               </a>
             </div>
           </article>
-      
+    
           <article class="place-card">
             <img class="place-image" src="images/maguide.png" alt="Plage de Maguide">
             <div class="place-content">
@@ -659,7 +664,7 @@
               </a>
             </div>
           </article>
-      
+    
           <article class="place-card">
             <img class="place-image" src="images/plage-sanguinet.png" alt="Plage de Sanguinet">
             <div class="place-content">
@@ -680,701 +685,373 @@
               </a>
             </div>
           </article>
-        
-        <!-- OCEAN -->
     
-        <article class="place-card">
-          <img class="place-image" src="images/bisca-plage-centre.png" alt="Plage centrale de Biscarrosse">
-          <div class="place-content">
-            <h3>Plage centrale de Biscarrosse</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Biscarrosse Plage</span>
-              <span class="place-tag">🕒 32 min</span>
-              <span class="place-tag">🗺️ 30 km</span>
-            </div>
-            <p class="place-text">
-              La plage principale avec accès facile, commerces, restaurants et zones surveillées. Idéale pour découvrir l’océan dans de bonnes conditions.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> parfait pour une journée complète avec toutes les commodités.
-            </p>
-            <a href="https://www.google.com/maps?q=Biscarrosse+Plage" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-    
-        <article class="place-card">
-          <img class="place-image" src="images/biscarrosse-plage.png" alt="Plage Nord Biscarrosse">
-          <div class="place-content">
-            <h3>Plage Nord de Biscarrosse</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Biscarrosse Plage</span>
-              <span class="place-tag">🕒 30 min</span>
-              <span class="place-tag">🗺️ 30 km</span>
-            </div>
-            <p class="place-text">
-              Une plage plus sauvage et moins fréquentée, idéale pour profiter de l’océan dans un cadre naturel.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> parfait pour éviter la foule en haute saison.
-            </p>
-            <a href="https://www.google.com/maps?q=Plage+Nord+Biscarrosse" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-    
-        <article class="place-card">
-          <img class="place-image" src="images/bisca-plage-sud.jpg" alt="Plage Sud Biscarrosse">
-          <div class="place-content">
-            <h3>Plage Sud de Biscarrosse</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Biscarrosse Plage</span>
-              <span class="place-tag">🕒 30 min</span>
-              <span class="place-tag">🗺️ 30 km</span>
-            </div>
-            <p class="place-text">
-              Une plage dynamique, idéale pour le surf et les activités nautiques, avec une ambiance estivale plus animée.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> parfait pour s’initier au surf.
-            </p>
-            <a href="https://www.google.com/maps?q=Plage+Sud+Biscarrosse" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-    
-        <article class="place-card">
-          <img class="place-image" src="images/mimizan-plage.jpg" alt="Plage de Mimizan">
-          <div class="place-content">
-            <h3>Plage de Mimizan</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Mimizan</span>
-              <span class="place-tag">🕒 28 min</span>
-              <span class="place-tag">🗺️ 30 km</span>
-            </div>
-            <p class="place-text">
-              Une grande plage avec promenade en front de mer, idéale pour alterner baignade, balade et restaurants.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> très agréable en fin de journée pour le coucher de soleil.
-            </p>
-            <a href="https://www.google.com/maps?q=Mimizan+Plage" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-    
-      </div>
-    </section>
-
-<section id="activites" class="category-panel">
-  <div class="category-header">
-    <h2>Activités</h2>
-    <p>
-      Pour profiter pleinement du séjour, plusieurs activités sont accessibles à proximité, que ce soit pour les amateurs de sport, les familles ou simplement pour s’amuser en plein air.
-    </p>
-  </div>
-
-  <div class="places-grid">
-
-    <!-- Skatepark & Pumptrack -->
-    <article class="place-card">
-      <img class="place-image" src="images/skatepark.jpg" alt="Skatepark et Pumptrack d’Ychoux">
-
-      <div class="place-content">
-        <h3>Skatepark & Pumptrack d’Ychoux</h3>
-
-        <div class="place-meta">
-          <span class="place-tag">📌 Ychoux</span>
-          <span class="place-tag">🕒 4 min</span>
-          <span class="place-tag">🗺️ 2,5 km</span>
-        </div>
-
-        <p class="place-text">
-          Un espace ludique et accessible pour pratiquer skate, trottinette, BMX ou rollers. Le pumptrack et le skatepark sont situés au même endroit, parfaits pour une sortie rapide et sportive.
-        </p>
-
-        <p class="place-tip">
-          <strong>Astuce :</strong> idéal pour les enfants et adolescents, ou pour une activité rapide en fin de journée.
-        </p>
-
-        <a href="https://www.google.com/maps?q=Pumptrack+Ychoux" target="_blank" class="map-button">
-          📍 Voir sur la carte
-        </a>
-      </div>
-    </article>
-
-    <!-- Leyre -->
-    <article class="place-card">
-      <img class="place-image" src="images/leyre.jpg" alt="Descente de la Leyre">
-    
-      <div class="place-content">
-        <h3>Descente de la Leyre en canoë</h3>
-    
-        <div class="place-meta">
-          <span class="place-tag">📌 Moustey / Pissos</span>
-          <span class="place-tag">🕒 10 à 15 min</span>
-          <span class="place-tag">🗺️ 10 à 15 km</span>
-        </div>
-    
-        <p class="place-text">
-          Une activité incontournable pour découvrir les Landes autrement, en descendant une rivière calme et ombragée au cœur de la forêt.
-        </p>
-    
-        <p class="place-tip">
-          <strong>Astuce :</strong> idéal en été pour rester au frais et profiter d’un moment nature.
-        </p>
-    
-        <a href="https://www.google.com/maps?q=Canoe+Leyre+Moustey" target="_blank" class="map-button">
-          📍 Voir sur la carte
-        </a>
-      </div>
-      </article>
-
-        <!-- Accrobranche -->
           <article class="place-card">
-            <img class="place-image" src="images/muse-hydravion.jpg" alt="Musée de l’Hydraviation à Biscarrosse">
+            <img class="place-image" src="images/bisca-plage-centre.png" alt="Plage centrale de Biscarrosse">
             <div class="place-content">
-              <h3>Musée de l’Hydraviation</h3>
+              <h3>Plage centrale de Biscarrosse</h3>
               <div class="place-meta">
-                <span class="place-tag">📌 Biscarrosse</span>
-                <span class="place-tag">🕒 24 min</span>
-                <span class="place-tag">🗺️ 21,5 km</span>
+                <span class="place-tag">📌 Biscarrosse Plage</span>
+                <span class="place-tag">🕒 32 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
               </div>
               <p class="place-text">
-                Une visite originale pour découvrir l’histoire des hydravions sur l’ancienne base Latécoère, entre patrimoine local et aventure aéronautique.
+                La plage principale avec accès facile, commerces, restaurants et zones surveillées. Idéale pour découvrir l’océan dans de bonnes conditions.
               </p>
               <p class="place-tip">
-                <strong>Astuce :</strong> très bonne option pour varier entre nature, plage et culture.
+                <strong>Astuce :</strong> parfait pour une journée complète avec toutes les commodités.
               </p>
-              <a href="https://www.google.com/maps?q=Musee+de+l+Hydraviation+Biscarrosse" target="_blank" class="map-button">
+              <a href="https://www.google.com/maps?q=Biscarrosse+Plage" target="_blank" class="map-button">
                 📍 Voir sur la carte
               </a>
             </div>
           </article>
-
-    <!-- Accrobranche -->
-    <article class="place-card">
-      <img class="place-image" src="images/Biscaventure.jpg" alt="Accrobranche à Biscarrosse">
     
-      <div class="place-content">
-        <h3>Accrobranche</h3>
+          <article class="place-card">
+            <img class="place-image" src="images/biscarrosse-plage.png" alt="Plage Nord Biscarrosse">
+            <div class="place-content">
+              <h3>Plage Nord de Biscarrosse</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse Plage</span>
+                <span class="place-tag">🕒 30 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Une plage plus sauvage et moins fréquentée, idéale pour profiter de l’océan dans un cadre naturel.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour éviter la foule en haute saison.
+              </p>
+              <a href="https://www.google.com/maps?q=Plage+Nord+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
     
-        <div class="place-meta">
-          <span class="place-tag">📌 Biscarrosse</span>
-          <span class="place-tag">🕒 25 min</span>
-          <span class="place-tag">🗺️ 25 km</span>
+          <article class="place-card">
+            <img class="place-image" src="images/bisca-plage-sud.jpg" alt="Plage Sud Biscarrosse">
+            <div class="place-content">
+              <h3>Plage Sud de Biscarrosse</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse Plage</span>
+                <span class="place-tag">🕒 30 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Une plage dynamique, idéale pour le surf et les activités nautiques, avec une ambiance estivale plus animée.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour s’initier au surf.
+              </p>
+              <a href="https://www.google.com/maps?q=Plage+Sud+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/mimizan-plage.jpg" alt="Plage de Mimizan">
+            <div class="place-content">
+              <h3>Plage de Mimizan</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Mimizan</span>
+                <span class="place-tag">🕒 28 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Une grande plage avec promenade en front de mer, idéale pour alterner baignade, balade et restaurants.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> très agréable en fin de journée pour le coucher de soleil.
+              </p>
+              <a href="https://www.google.com/maps?q=Mimizan+Plage" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
         </div>
-    
-        <p class="place-text">
-          Parcours dans les arbres adaptés à tous les niveaux, avec tyroliennes et ateliers ludiques en pleine forêt landaise.
-        </p>
-    
-        <p class="place-tip">
-          <strong>Astuce :</strong> parfait pour une sortie en famille ou entre amis, avec différents niveaux selon l’âge.
-        </p>
-    
-        <a href="https://www.google.com/maps?q=Accrobranche+Biscarrosse" target="_blank" class="map-button">
-          📍 Voir sur la carte
-        </a>
       </div>
-    </article>
-
-    <!-- Karting -->
-    <article class="place-card">
-      <img class="place-image" src="images/karting.jpg" alt="Karting à Biscarrosse">
     
-      <div class="place-content">
-        <h3>Karting</h3>
+      <div id="lacs-lacs" class="subfilter-panel">
+        <div class="places-grid">
     
-        <div class="place-meta">
-          <span class="place-tag">📌 Biscarrosse</span>
-          <span class="place-tag">🕒 20 min</span>
-          <span class="place-tag">🗺️ 20 km</span>
+          <article class="place-card">
+            <img class="place-image" src="images/lac-parentis.png" alt="Lac de Parentis">
+            <div class="place-content">
+              <h3>Lac de Parentis-en-Born</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Parentis-en-Born</span>
+                <span class="place-tag">🕒 8-12 min</span>
+                <span class="place-tag">🗺️ 11 km</span>
+              </div>
+              <p class="place-text">
+                Un lac très proche et facile d’accès, parfait pour une baignade rapide ou un moment de détente dans une ambiance locale.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal pour une sortie simple et calme sans affluence.
+              </p>
+              <a href="https://www.google.com/maps?q=Lac+de+Parentis-en-Born" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/maguide.png" alt="Plage de Maguide">
+            <div class="place-content">
+              <h3>Plage de Maguide</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse Lac</span>
+                <span class="place-tag">🕒 32 min</span>
+                <span class="place-tag">🗺️ 35 km</span>
+              </div>
+              <p class="place-text">
+                Une plage de lac très aménagée avec sable fin, eau peu profonde et nombreuses activités. L’endroit le plus vivant du lac.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait avec enfants, mais plus fréquenté en été.
+              </p>
+              <a href="https://www.google.com/maps?q=Plage+de+Maguide+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/plage-sanguinet.png" alt="Plage de Sanguinet">
+            <div class="place-content">
+              <h3>Plages du lac de Sanguinet (Caton & Pavillon)</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Sanguinet</span>
+                <span class="place-tag">🕒 18 min</span>
+                <span class="place-tag">🗺️ 15 km</span>
+              </div>
+              <p class="place-text">
+                Des plages de lac avec eau claire et cadre naturel, offrant un excellent compromis entre calme et confort.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> Caton est plus tranquille, Pavillon plus pratique.
+              </p>
+              <a href="https://www.google.com/maps?q=Plage+de+Caton+Sanguinet" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
         </div>
-    
-        <p class="place-text">
-          Circuit de karting accessible aux adultes et aux enfants, idéal pour une activité dynamique et ludique pendant le séjour.
-        </p>
-    
-        <p class="place-tip">
-          <strong>Astuce :</strong> parfait par temps nuageux ou pour changer des activités nautiques.
-        </p>
-    
-        <a href="https://www.google.com/maps?q=Karting+Biscarrosse" target="_blank" class="map-button">
-          📍 Voir sur la carte
-        </a>
       </div>
-    </article>
     
-    <!-- AquaPark -->
-    <article class="place-card">
-      <img class="place-image" src="images/aquapark.jpg" alt="AquaPark de Biscarrosse">
-
-      <div class="place-content">
-        <h3>AquaPark de Biscarrosse</h3>
-
-        <div class="place-meta">
-          <span class="place-tag">📌 Biscarrosse Lac</span>
-          <span class="place-tag">🕒 30 min</span>
-          <span class="place-tag">🗺️ 34 km</span>
+      <div id="lacs-ocean" class="subfilter-panel">
+        <div class="places-grid">
+    
+          <article class="place-card">
+            <img class="place-image" src="images/bisca-plage-centre.png" alt="Plage centrale de Biscarrosse">
+            <div class="place-content">
+              <h3>Plage centrale de Biscarrosse</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse Plage</span>
+                <span class="place-tag">🕒 32 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                La plage principale avec accès facile, commerces, restaurants et zones surveillées. Idéale pour découvrir l’océan dans de bonnes conditions.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour une journée complète avec toutes les commodités.
+              </p>
+              <a href="https://www.google.com/maps?q=Biscarrosse+Plage" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/biscarrosse-plage.png" alt="Plage Nord Biscarrosse">
+            <div class="place-content">
+              <h3>Plage Nord de Biscarrosse</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse Plage</span>
+                <span class="place-tag">🕒 30 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Une plage plus sauvage et moins fréquentée, idéale pour profiter de l’océan dans un cadre naturel.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour éviter la foule en haute saison.
+              </p>
+              <a href="https://www.google.com/maps?q=Plage+Nord+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/bisca-plage-sud.jpg" alt="Plage Sud Biscarrosse">
+            <div class="place-content">
+              <h3>Plage Sud de Biscarrosse</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse Plage</span>
+                <span class="place-tag">🕒 30 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Une plage dynamique, idéale pour le surf et les activités nautiques, avec une ambiance estivale plus animée.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour s’initier au surf.
+              </p>
+              <a href="https://www.google.com/maps?q=Plage+Sud+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/mimizan-plage.jpg" alt="Plage de Mimizan">
+            <div class="place-content">
+              <h3>Plage de Mimizan</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Mimizan</span>
+                <span class="place-tag">🕒 28 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Une grande plage avec promenade en front de mer, idéale pour alterner baignade, balade et restaurants.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> très agréable en fin de journée pour le coucher de soleil.
+              </p>
+              <a href="https://www.google.com/maps?q=Mimizan+Plage" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
         </div>
-
-        <p class="place-text">
-          Un parc aquatique gonflable installé sur le lac, idéal pour s’amuser en famille ou entre amis avec parcours, sauts et glissades.
-        </p>
-
-        <p class="place-tip">
-          <strong>Astuce :</strong> parfait pour une demi-journée dynamique, surtout avec des enfants ou ados.
-        </p>
-
-        <a href="https://www.google.com/maps?q=AquaPark+Biscarrosse+Port+Maguide" target="_blank" class="map-button">
-          📍 Voir sur la carte
-        </a>
       </div>
-    </article>
-
-    <!-- Minigolf -->
-    <article class="place-card">
-      <img class="place-image" src="images/minigolf.jpg" alt="Mini-golf de Maguide à Biscarrosse">
+    </section>
     
-      <div class="place-content">
-        <h3>Mini-golf de Maguide</h3>
-    
-        <div class="place-meta">
-          <span class="place-tag">📌 Biscarrosse Lac</span>
-          <span class="place-tag">🕒 30 min</span>
-          <span class="place-tag">🗺️ 34 km</span>
-        </div>
-    
-        <p class="place-text">
-          Un mini-golf agréable situé près du lac, parfait pour un moment simple et convivial, avec possibilité de se restaurer sur place.
-        </p>
-    
-        <p class="place-tip">
-          <strong>Astuce :</strong> idéal en fin de journée après la plage ou le lac.
-        </p>
-    
-        <a href="https://www.google.com/maps?q=Mini+Golf+Maguide+Biscarrosse" target="_blank" class="map-button">
-          📍 Voir sur la carte
-        </a>
-      </div>
-    </article>
-
-    <!-- Surf -->
-    <article class="place-card">
-      <img class="place-image" src="images/surf.png" alt="Surf à Biscarrosse">
-
-      <div class="place-content">
-        <h3>Surf à Biscarrosse</h3>
-
-        <div class="place-meta">
-          <span class="place-tag">📌 Biscarrosse Plage</span>
-          <span class="place-tag">🕒 30 min</span>
-          <span class="place-tag">🗺️ 30 km</span>
-        </div>
-
-        <p class="place-text">
-          Une activité emblématique de la côte landaise. Plusieurs écoles permettent de s’initier ou de progresser dans un cadre idéal.
-        </p>
-
-        <p class="place-tip">
-          <strong>Astuce :</strong> accessible même aux débutants avec cours encadrés.
-        </p>
-
-        <a href="https://www.google.com/maps?q=Surf+Biscarrosse+Plage" target="_blank" class="map-button">
-          📍 Voir sur la carte
-        </a>
-      </div>
-    </article>
-
-    <!-- Aqualand -->
-    <article class="place-card">
-      <img class="place-image" src="images/aqualand.png" alt="Aqualand Bassin d’Arcachon">
-    
-      <div class="place-content">
-        <h3>Aqualand</h3>
-    
-        <div class="place-meta">
-          <span class="place-tag">📌 Gujan-Mestras</span>
-          <span class="place-tag">🕒 45 min</span>
-          <span class="place-tag">🗺️ 45 km</span>
-        </div>
-    
-        <p class="place-text">
-          Un grand parc aquatique avec toboggans, piscines et espaces détente, idéal pour une journée fun en famille ou entre amis.
-        </p>
-    
-        <p class="place-tip">
-          <strong>Astuce :</strong> à privilégier en semaine pour éviter l’affluence.
-        </p>
-    
-        <a href="https://www.google.com/maps?q=Aqualand+Gujan-Mestras" target="_blank" class="map-button">
-          📍 Voir sur la carte
-        </a>
-      </div>
-    </article>
-
-    <!-- Activités nautiques -->
-    <article class="place-card">
-      <img class="place-image" src="images/sports-nautiques.jpg" alt="Activités nautiques autour des lacs">
-
-      <div class="place-content">
-        <h3>Activités nautiques</h3>
-
-        <div class="place-meta">
-          <span class="place-tag">📌 Sanguinet / Parentis / Biscarrosse</span>
-          <span class="place-tag">🕒 10 à 30 min</span>
-          <span class="place-tag">🗺️ 10 à 30 km</span>
-        </div>
-
-        <p class="place-text">
-          De nombreuses activités sont proposées sur les lacs : paddle, canoë, pédalo, bouée tractée ou encore surf électrique pour une expérience originale.
-        </p>
-
-        <p class="place-tip">
-          <strong>Astuce :</strong> idéal pour varier les plaisirs entre détente et sensations, dans un cadre plus calme que l’océan.
-        </p>
-
-        <a href="https://www.google.com/maps?q=Lac+de+Sanguinet" target="_blank" class="map-button">
-          📍 Voir sur la carte
-        </a>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-    <section id="restaurants" class="category-panel">
+    <section id="activites" class="category-panel">
       <div class="category-header">
-        <h2>Restaurants & bars</h2>
+        <h2>Activités</h2>
         <p>
-          Cette rubrique peut accueillir davantage d’adresses sans perdre en lisibilité. Le plus important est de garder des fiches courtes, illustrées, utiles et honnêtes.
+          Pour profiter pleinement du séjour, plusieurs activités sont accessibles à proximité, que ce soit pour les amateurs de sport, les familles ou simplement pour s’amuser en plein air.
         </p>
       </div>
-
+    
       <div class="places-grid">
+    
+        <!-- Skatepark & Pumptrack -->
         <article class="place-card">
-          <img class="place-image" src="images/lou-choureut.png" alt="Restaurant Lou Choureut à Ychoux">
+          <img class="place-image" src="images/skatepark.jpg" alt="Skatepark et Pumptrack d’Ychoux">
+    
           <div class="place-content">
-            <h3>Lou Choureut - Chez Hélène</h3>
+            <h3>Skatepark & Pumptrack d’Ychoux</h3>
+    
             <div class="place-meta">
               <span class="place-tag">📌 Ychoux</span>
-              <span class="place-tag">🕒 3 min</span>
-              <span class="place-tag">🗺️ 3 km</span>
+              <span class="place-tag">🕒 4 min</span>
+              <span class="place-tag">🗺️ 2,5 km</span>
             </div>
+    
             <p class="place-text">
-              Restaurant convivial au cœur d’Ychoux, offrant un service souriant et attentif. On y savoure une cuisine simple, généreuse et pleine de goût, portée par une carte sans prétention mais parfaitement maîtrisée, mettant à l’honneur des produits locaux.
+              Un espace ludique et accessible pour pratiquer skate, trottinette, BMX ou rollers. Le pumptrack et le skatepark sont situés au même endroit, parfaits pour une sortie rapide et sportive.
             </p>
+    
             <p class="place-tip">
-              <strong>Astuce :</strong> situé à seulement 1,9 km. Parfait si l’on ne souhaite pas faire à manger (pensez à réserver)
+              <strong>Astuce :</strong> idéal pour les enfants et adolescents, ou pour une activité rapide en fin de journée.
             </p>
-            <a href="https://www.google.com/maps?q=Lou+Choureut+Ychoux" target="_blank" class="map-button">
+    
+            <a href="https://www.google.com/maps?q=Pumptrack+Ychoux" target="_blank" class="map-button">
               📍 Voir sur la carte
             </a>
           </div>
         </article>
-
+    
+        <!-- Leyre -->
         <article class="place-card">
-          <img class="place-image" src="images/halles-pop-parentis.png" alt="Halles Pop à Parentis-en-Born">
-          <div class="place-content">
-            <h3>Halles Pop’</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Parentis-en-Born</span>
-              <span class="place-tag">🕒 12 min</span>
-              <span class="place-tag">🗺️ 12 km</span>
-            </div>
-            <p class="place-text">
-              Une adresse vivante et décontractée à Parentis-en-Born, idéale pour partager un moment convivial autour de tapas, de plats à partager ou d’un verre entre amis ou en famille.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> parfait pour une soirée plus animée, dans une ambiance vacances simple et chaleureuse.
-            </p>
-            <a href="https://www.google.com/maps?q=Halles+Pop+Parentis-en-Born" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-
-        <article class="place-card">
-          <img class="place-image" src="images/kahut.jpeg" alt="Chez Flo Restaurant">
-          <div class="place-content">
-            <h3>Chez Flo & La Kahut</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Parentis-en-Born</span>
-              <span class="place-tag">🕒 12 min</span>
-              <span class="place-tag">🗺️ 12 km</span>
-            </div>
-            <p class="place-text">
-              Une adresse proche pour déjeuner ou dîner sans s’éloigner trop d’Ychoux, tout en profitant d’une ambiance plus animée qu’au village.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> bonne option pour combiner sortie au lac et repas sur Parentis.
-            </p>
-            <a href="https://www.google.com/maps?q=Chez+Flo+Restaurant+Parentis-en-Born" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-
-        <article class="place-card">
-          <img class="place-image" src="images/camette.jpg" alt="Chez Camette">
-          <div class="place-content">
-            <h3>Chez Camette</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Biscarrosse ville</span>
-              <span class="place-tag">🕒 22 min</span>
-              <span class="place-tag">🗺️ 20 km</span>
-            </div>
-            <p class="place-text">
-              Restaurant local convivial proposant une cuisine simple et généreuse dans une ambiance authentique.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> parfait après une journée d’activités.
-            </p>
-            <a href="https://www.google.com/maps?q=Chez+Camette+Biscarrosse" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-
-        <article class="place-card">
-          <img class="place-image" src="images/coorniche.jpg" alt="La Co(o)rniche au Pyla">
-          <div class="place-content">
-            <h3>La Co(o)rniche</h3>
-            <div class="place-meta">
-              <span class="place-tag">📌 Pyla-sur-Mer</span>
-              <span class="place-tag">🕒 42 min</span>
-              <span class="place-tag">🗺️ 41 km</span>
-            </div>
-            <p class="place-text">
-              Une adresse emblématique pour profiter d’un cadre exceptionnel face à l’océan, à la dune du Pilat et au Banc d’Arguin. Idéal pour un verre, un déjeuner ou un dîner avec une très belle vue.
-            </p>
-            <p class="place-tip">
-              <strong>Astuce :</strong> A réserver rapidement, endroit très populaire.
-            </p>
-            <a href="https://www.google.com/maps?q=La+Coorniche+Pyla-sur-Mer" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-
-        <article class="place-card">
-          <img class="place-image" src="images/epicurien.jpg" alt="L'Épicurien à Biscarrosse">
+          <img class="place-image" src="images/leyre.jpg" alt="Descente de la Leyre">
         
           <div class="place-content">
-            <h3>L’Épicurien</h3>
+            <h3>Descente de la Leyre en canoë</h3>
         
             <div class="place-meta">
-              <span class="place-tag">📌 Biscarrosse ville</span>
-              <span class="place-tag">🕒 20 min</span>
-              <span class="place-tag">🗺️ 20 km</span>
+              <span class="place-tag">📌 Moustey / Pissos</span>
+              <span class="place-tag">🕒 10 à 15 min</span>
+              <span class="place-tag">🗺️ 10 à 15 km</span>
             </div>
         
             <p class="place-text">
-              Une adresse reconnue pour une cuisine raffinée et travaillée, avec des produits de qualité et une présentation soignée.
+              Une activité incontournable pour découvrir les Landes autrement, en descendant une rivière calme et ombragée au cœur de la forêt.
             </p>
         
             <p class="place-tip">
-              <strong>Astuce :</strong> idéal pour un dîner plus posé ou une occasion particulière.
+              <strong>Astuce :</strong> idéal en été pour rester au frais et profiter d’un moment nature.
             </p>
         
-            <a href="https://www.google.com/maps?q=Restaurant+L+Epicurien+Biscarrosse" target="_blank" class="map-button">
+            <a href="https://www.google.com/maps?q=Canoe+Leyre+Moustey" target="_blank" class="map-button">
               📍 Voir sur la carte
             </a>
           </div>
-        </article>
-        
+          </article>
+    
+            <!-- Accrobranche -->
+              <article class="place-card">
+                <img class="place-image" src="images/muse-hydravion.jpg" alt="Musée de l’Hydraviation à Biscarrosse">
+                <div class="place-content">
+                  <h3>Musée de l’Hydraviation</h3>
+                  <div class="place-meta">
+                    <span class="place-tag">📌 Biscarrosse</span>
+                    <span class="place-tag">🕒 24 min</span>
+                    <span class="place-tag">🗺️ 21,5 km</span>
+                  </div>
+                  <p class="place-text">
+                    Une visite originale pour découvrir l’histoire des hydravions sur l’ancienne base Latécoère, entre patrimoine local et aventure aéronautique.
+                  </p>
+                  <p class="place-tip">
+                    <strong>Astuce :</strong> très bonne option pour varier entre nature, plage et culture.
+                  </p>
+                  <a href="https://www.google.com/maps?q=Musee+de+l+Hydraviation+Biscarrosse" target="_blank" class="map-button">
+                    📍 Voir sur la carte
+                  </a>
+                </div>
+              </article>
+    
+        <!-- Accrobranche -->
         <article class="place-card">
-          <img class="place-image" src="images/cabane-du-bourg.jpg" alt="La Cabane du Bourg à Biscarrosse">
+          <img class="place-image" src="images/Biscaventure.jpg" alt="Accrobranche à Biscarrosse">
         
           <div class="place-content">
-            <h3>La Cabane du Bourg</h3>
+            <h3>Accrobranche</h3>
         
             <div class="place-meta">
-              <span class="place-tag">📌 Biscarrosse ville</span>
-              <span class="place-tag">🕒 20 min</span>
-              <span class="place-tag">🗺️ 20 km</span>
-            </div>
-        
-            <p class="place-text">
-              Bar à huîtres convivial pour déguster des produits frais dans une ambiance simple et authentique.
-            </p>
-        
-            <p class="place-tip">
-              <strong>Astuce :</strong> parfait pour un apéritif ou un moment typique du Sud-Ouest.
-            </p>
-        
-            <a href="https://www.google.com/maps?q=La+Cabane+du+Bourg+Biscarrosse" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-        
-        <article class="place-card">
-          <img class="place-image" src="images/La-Petite-Playa.jpg" alt="La Paillote et La Petite Playa à Cazaux">
-        
-          <div class="place-content">
-            <h3>La Paillote & La Petite Playa</h3>
-        
-            <div class="place-meta">
-              <span class="place-tag">📌 Cazaux (lac)</span>
-              <span class="place-tag">🕒 30 min</span>
-              <span class="place-tag">🗺️ 28 km</span>
-            </div>
-        
-            <p class="place-text">
-              Deux adresses en bord de lac avec une ambiance estivale, parfaites pour déjeuner, boire un verre ou profiter d’un moment au soleil.
-            </p>
-        
-            <p class="place-tip">
-              <strong>Astuce :</strong> idéal après une baignade ou en fin de journée pour profiter du cadre.
-            </p>
-        
-            <a href="https://www.google.com/maps?q=La+Paillote+Cazaux" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-        
-        <article class="place-card">
-          <img class="place-image" src="images/lannexe.jpg" alt="L’Annexe à Biscarrosse Plage">
-        
-          <div class="place-content">
-            <h3>L’Annexe</h3>
-        
-            <div class="place-meta">
-              <span class="place-tag">📌 Biscarrosse Plage</span>
-              <span class="place-tag">🕒 30 min</span>
-              <span class="place-tag">🗺️ 30 km</span>
-            </div>
-        
-            <p class="place-text">
-              Une adresse moderne et conviviale, idéale pour un repas simple dans une ambiance détendue après la plage.
-            </p>
-        
-            <p class="place-tip">
-              <strong>Astuce :</strong> parfait pour un dîner sans prise de tête en bord de mer.
-            </p>
-        
-            <a href="https://www.google.com/maps?q=L+Annexe+Biscarrosse+Plage" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-        
-        <article class="place-card">
-          <img class="place-image" src="images/surfpalace.jpg" alt="Surf Palace à Biscarrosse Plage">
-        
-          <div class="place-content">
-            <h3>Surf Palace</h3>
-        
-            <div class="place-meta">
-              <span class="place-tag">📌 Biscarrosse Plage</span>
-              <span class="place-tag">🕒 30 min</span>
-              <span class="place-tag">🗺️ 30 km</span>
-            </div>
-        
-            <p class="place-text">
-              Restaurant à l’ambiance surf, parfait pour manger dans un cadre décontracté typique des vacances à l’océan.
-            </p>
-        
-            <p class="place-tip">
-              <strong>Astuce :</strong> idéal après une session plage ou surf.
-            </p>
-        
-            <a href="https://www.google.com/maps?q=Surf+Palace+Biscarrosse+Plage" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-        
-        <article class="place-card">
-          <img class="place-image" src="images/orestoshow.jpg" alt="Ô Resto Show à Navarrosse">
-        
-          <div class="place-content">
-            <h3>Ô Resto Show</h3>
-        
-            <div class="place-meta">
-              <span class="place-tag">📌 Navarrosse (lac)</span>
+              <span class="place-tag">📌 Biscarrosse</span>
               <span class="place-tag">🕒 25 min</span>
-              <span class="place-tag">🗺️ 22 km</span>
+              <span class="place-tag">🗺️ 25 km</span>
             </div>
         
             <p class="place-text">
-              Restaurant en bord de lac, apprécié pour son cadre agréable et son ambiance conviviale, idéal après une journée baignade.
+              Parcours dans les arbres adaptés à tous les niveaux, avec tyroliennes et ateliers ludiques en pleine forêt landaise.
             </p>
         
             <p class="place-tip">
-              <strong>Astuce :</strong> parfait pour prolonger la journée au lac sans changer de cadre.
+              <strong>Astuce :</strong> parfait pour une sortie en famille ou entre amis, avec différents niveaux selon l’âge.
             </p>
         
-            <a href="https://www.google.com/maps?q=O+Resto+Show+Navarrosse" target="_blank" class="map-button">
+            <a href="https://www.google.com/maps?q=Accrobranche+Biscarrosse" target="_blank" class="map-button">
               📍 Voir sur la carte
             </a>
           </div>
         </article>
-        
+    
+        <!-- Karting -->
         <article class="place-card">
-          <img class="place-image" src="images/a-noste.jpg" alt="A Noste à Mimizan">
+          <img class="place-image" src="images/karting.jpg" alt="Karting à Biscarrosse">
         
           <div class="place-content">
-            <h3>A Noste</h3>
-        
-            <div class="place-meta">
-              <span class="place-tag">📌 Mimizan</span>
-              <span class="place-tag">🕒 30 min</span>
-              <span class="place-tag">🗺️ 30 km</span>
-            </div>
-        
-            <p class="place-text">
-              Une belle adresse à Mimizan avec une cuisine moderne et un cadre agréable, parfaite pour varier des sorties côté Biscarrosse.
-            </p>
-        
-            <p class="place-tip">
-              <strong>Astuce :</strong> idéal à combiner avec une journée plage ou une balade en front de mer.
-            </p>
-        
-            <a href="https://www.google.com/maps?q=A+Noste+Mimizan" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-
-        <article class="place-card">
-          <img class="place-image" src="images/brasserie-mira.jpg" alt="Brasserie Mira à La Teste-de-Buch">
-        
-          <div class="place-content">
-            <h3>Brasserie Mira</h3>
-        
-            <div class="place-meta">
-              <span class="place-tag">📌 La Teste-de-Buch</span>
-              <span class="place-tag">🕒 40 min</span>
-              <span class="place-tag">🗺️ 45 km</span>
-            </div>
-        
-            <p class="place-text">
-              Brasserie artisanale reconnue du bassin, proposant des bières locales à déguster sur place dans une ambiance conviviale ou à emporter.
-            </p>
-        
-            <p class="place-tip">
-              <strong>Astuce :</strong> idéal pour une pause en fin de journée ou pour ramener quelques bières locales.
-            </p>
-        
-            <a href="https://www.google.com/maps?q=Brasserie+Mira+La+Teste-de-Buch" target="_blank" class="map-button">
-              📍 Voir sur la carte
-            </a>
-          </div>
-        </article>
-        
-        <article class="place-card">
-          <img class="place-image" src="images/lagang.jpg" alt="Brasserie La Gang à Biscarrosse">
-        
-          <div class="place-content">
-            <h3>Brasserie La Gang</h3>
+            <h3>Karting</h3>
         
             <div class="place-meta">
               <span class="place-tag">📌 Biscarrosse</span>
@@ -1383,398 +1060,1147 @@
             </div>
         
             <p class="place-text">
-              Micro-brasserie locale proposant des bières artisanales, avec une approche simple et authentique.
+              Circuit de karting accessible aux adultes et aux enfants, idéal pour une activité dynamique et ludique pendant le séjour.
             </p>
         
             <p class="place-tip">
-              <strong>Astuce :</strong> parfait pour découvrir une production locale plus confidentielle.
+              <strong>Astuce :</strong> parfait par temps nuageux ou pour changer des activités nautiques.
             </p>
         
-            <a href="https://www.google.com/maps?q=Brasserie+La+Gang+Biscarrosse" target="_blank" class="map-button">
+            <a href="https://www.google.com/maps?q=Karting+Biscarrosse" target="_blank" class="map-button">
               📍 Voir sur la carte
             </a>
           </div>
         </article>
         
+        <!-- AquaPark -->
+        <article class="place-card">
+          <img class="place-image" src="images/aquapark.jpg" alt="AquaPark de Biscarrosse">
+    
+          <div class="place-content">
+            <h3>AquaPark de Biscarrosse</h3>
+    
+            <div class="place-meta">
+              <span class="place-tag">📌 Biscarrosse Lac</span>
+              <span class="place-tag">🕒 30 min</span>
+              <span class="place-tag">🗺️ 34 km</span>
+            </div>
+    
+            <p class="place-text">
+              Un parc aquatique gonflable installé sur le lac, idéal pour s’amuser en famille ou entre amis avec parcours, sauts et glissades.
+            </p>
+    
+            <p class="place-tip">
+              <strong>Astuce :</strong> parfait pour une demi-journée dynamique, surtout avec des enfants ou ados.
+            </p>
+    
+            <a href="https://www.google.com/maps?q=AquaPark+Biscarrosse+Port+Maguide" target="_blank" class="map-button">
+              📍 Voir sur la carte
+            </a>
+          </div>
+        </article>
+    
+        <!-- Minigolf -->
+        <article class="place-card">
+          <img class="place-image" src="images/minigolf.jpg" alt="Mini-golf de Maguide à Biscarrosse">
+        
+          <div class="place-content">
+            <h3>Mini-golf de Maguide</h3>
+        
+            <div class="place-meta">
+              <span class="place-tag">📌 Biscarrosse Lac</span>
+              <span class="place-tag">🕒 30 min</span>
+              <span class="place-tag">🗺️ 34 km</span>
+            </div>
+        
+            <p class="place-text">
+              Un mini-golf agréable situé près du lac, parfait pour un moment simple et convivial, avec possibilité de se restaurer sur place.
+            </p>
+        
+            <p class="place-tip">
+              <strong>Astuce :</strong> idéal en fin de journée après la plage ou le lac.
+            </p>
+        
+            <a href="https://www.google.com/maps?q=Mini+Golf+Maguide+Biscarrosse" target="_blank" class="map-button">
+              📍 Voir sur la carte
+            </a>
+          </div>
+        </article>
+    
+        <!-- Surf -->
+        <article class="place-card">
+          <img class="place-image" src="images/surf.png" alt="Surf à Biscarrosse">
+    
+          <div class="place-content">
+            <h3>Surf à Biscarrosse</h3>
+    
+            <div class="place-meta">
+              <span class="place-tag">📌 Biscarrosse Plage</span>
+              <span class="place-tag">🕒 30 min</span>
+              <span class="place-tag">🗺️ 30 km</span>
+            </div>
+    
+            <p class="place-text">
+              Une activité emblématique de la côte landaise. Plusieurs écoles permettent de s’initier ou de progresser dans un cadre idéal.
+            </p>
+    
+            <p class="place-tip">
+              <strong>Astuce :</strong> accessible même aux débutants avec cours encadrés.
+            </p>
+    
+            <a href="https://www.google.com/maps?q=Surf+Biscarrosse+Plage" target="_blank" class="map-button">
+              📍 Voir sur la carte
+            </a>
+          </div>
+        </article>
+    
+        <!-- Aqualand -->
+        <article class="place-card">
+          <img class="place-image" src="images/aqualand.png" alt="Aqualand Bassin d’Arcachon">
+        
+          <div class="place-content">
+            <h3>Aqualand</h3>
+        
+            <div class="place-meta">
+              <span class="place-tag">📌 Gujan-Mestras</span>
+              <span class="place-tag">🕒 45 min</span>
+              <span class="place-tag">🗺️ 45 km</span>
+            </div>
+        
+            <p class="place-text">
+              Un grand parc aquatique avec toboggans, piscines et espaces détente, idéal pour une journée fun en famille ou entre amis.
+            </p>
+        
+            <p class="place-tip">
+              <strong>Astuce :</strong> à privilégier en semaine pour éviter l’affluence.
+            </p>
+        
+            <a href="https://www.google.com/maps?q=Aqualand+Gujan-Mestras" target="_blank" class="map-button">
+              📍 Voir sur la carte
+            </a>
+          </div>
+        </article>
+    
+        <!-- Activités nautiques -->
+        <article class="place-card">
+          <img class="place-image" src="images/sports-nautiques.jpg" alt="Activités nautiques autour des lacs">
+    
+          <div class="place-content">
+            <h3>Activités nautiques</h3>
+    
+            <div class="place-meta">
+              <span class="place-tag">📌 Sanguinet / Parentis / Biscarrosse</span>
+              <span class="place-tag">🕒 10 à 30 min</span>
+              <span class="place-tag">🗺️ 10 à 30 km</span>
+            </div>
+    
+            <p class="place-text">
+              De nombreuses activités sont proposées sur les lacs : paddle, canoë, pédalo, bouée tractée ou encore surf électrique pour une expérience originale.
+            </p>
+    
+            <p class="place-tip">
+              <strong>Astuce :</strong> idéal pour varier les plaisirs entre détente et sensations, dans un cadre plus calme que l’océan.
+            </p>
+    
+            <a href="https://www.google.com/maps?q=Lac+de+Sanguinet" target="_blank" class="map-button">
+              📍 Voir sur la carte
+            </a>
+          </div>
+        </article>
+    
       </div>
+    </section>
 
-      <div class="section-note">
-        <h3>Évolution recommandée</h3>
+    <section id="restaurants" class="category-panel">
+      <div class="category-header">
+        <h2>Restaurants & bars</h2>
         <p>
-          Lorsque tu commenceras à ajouter davantage d’adresses, on pourra très facilement enrichir cette rubrique avec 6, 8 ou 10 fiches, voire créer plus tard des sous-filtres comme “famille”, “rapide”, “plaisir” ou “local”.
+          Cette rubrique peut accueillir davantage d’adresses sans perdre en lisibilité. Le plus important est de garder des fiches courtes, illustrées, utiles et honnêtes.
         </p>
+      </div>
+    
+      <div class="subfilter-menu">
+        <button class="subfilter-btn active" data-subtarget="restaurants-tous">Tous</button>
+        <button class="subfilter-btn" data-subtarget="restaurants-restaurants">Restaurants</button>
+        <button class="subfilter-btn" data-subtarget="restaurants-bars">Bars</button>
+      </div>
+    
+      <div id="restaurants-tous" class="subfilter-panel active">
+        <div class="places-grid">
+    
+          <article class="place-card">
+            <img class="place-image" src="images/lou-choureut.png" alt="Restaurant Lou Choureut à Ychoux">
+            <div class="place-content">
+              <h3>Lou Choureut - Chez Hélène</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Ychoux</span>
+                <span class="place-tag">🕒 3 min</span>
+                <span class="place-tag">🗺️ 3 km</span>
+              </div>
+              <p class="place-text">
+                Restaurant convivial au cœur d’Ychoux, offrant un service souriant et attentif. On y savoure une cuisine simple, généreuse et pleine de goût, portée par une carte sans prétention mais parfaitement maîtrisée, mettant à l’honneur des produits locaux.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> situé à seulement 1,9 km. Parfait si l’on ne souhaite pas faire à manger (pensez à réserver)
+              </p>
+              <a href="https://www.google.com/maps?q=Lou+Choureut+Ychoux" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/halles-pop-parentis.png" alt="Halles Pop à Parentis-en-Born">
+            <div class="place-content">
+              <h3>Halles Pop’</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Parentis-en-Born</span>
+                <span class="place-tag">🕒 12 min</span>
+                <span class="place-tag">🗺️ 12 km</span>
+              </div>
+              <p class="place-text">
+                Une adresse vivante et décontractée à Parentis-en-Born, idéale pour partager un moment convivial autour de tapas, de plats à partager ou d’un verre entre amis ou en famille.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour une soirée plus animée, dans une ambiance vacances simple et chaleureuse.
+              </p>
+              <a href="https://www.google.com/maps?q=Halles+Pop+Parentis-en-Born" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/kahut.jpeg" alt="Chez Flo Restaurant">
+            <div class="place-content">
+              <h3>Chez Flo & La Kahut</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Parentis-en-Born</span>
+                <span class="place-tag">🕒 12 min</span>
+                <span class="place-tag">🗺️ 12 km</span>
+              </div>
+              <p class="place-text">
+                Une adresse proche pour déjeuner ou dîner sans s’éloigner trop d’Ychoux, tout en profitant d’une ambiance plus animée qu’au village.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> bonne option pour combiner sortie au lac et repas sur Parentis.
+              </p>
+              <a href="https://www.google.com/maps?q=Chez+Flo+Restaurant+Parentis-en-Born" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/camette.jpg" alt="Chez Camette">
+            <div class="place-content">
+              <h3>Chez Camette</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse ville</span>
+                <span class="place-tag">🕒 22 min</span>
+                <span class="place-tag">🗺️ 20 km</span>
+              </div>
+              <p class="place-text">
+                Restaurant local convivial proposant une cuisine simple et généreuse dans une ambiance authentique.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait après une journée d’activités.
+              </p>
+              <a href="https://www.google.com/maps?q=Chez+Camette+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/coorniche.jpg" alt="La Co(o)rniche au Pyla">
+            <div class="place-content">
+              <h3>La Co(o)rniche</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Pyla-sur-Mer</span>
+                <span class="place-tag">🕒 42 min</span>
+                <span class="place-tag">🗺️ 41 km</span>
+              </div>
+              <p class="place-text">
+                Une adresse emblématique pour profiter d’un cadre exceptionnel face à l’océan, à la dune du Pilat et au Banc d’Arguin. Idéal pour un verre, un déjeuner ou un dîner avec une très belle vue.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> A réserver rapidement, endroit très populaire.
+              </p>
+              <a href="https://www.google.com/maps?q=La+Coorniche+Pyla-sur-Mer" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/epicurien.jpg" alt="L'Épicurien à Biscarrosse">
+            <div class="place-content">
+              <h3>L’Épicurien</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse ville</span>
+                <span class="place-tag">🕒 20 min</span>
+                <span class="place-tag">🗺️ 20 km</span>
+              </div>
+              <p class="place-text">
+                Une adresse reconnue pour une cuisine raffinée et travaillée, avec des produits de qualité et une présentation soignée.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal pour un dîner plus posé ou une occasion particulière.
+              </p>
+              <a href="https://www.google.com/maps?q=Restaurant+L+Epicurien+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/cabane-du-bourg.jpg" alt="La Cabane du Bourg à Biscarrosse">
+            <div class="place-content">
+              <h3>La Cabane du Bourg</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse ville</span>
+                <span class="place-tag">🕒 20 min</span>
+                <span class="place-tag">🗺️ 20 km</span>
+              </div>
+              <p class="place-text">
+                Bar à huîtres convivial pour déguster des produits frais dans une ambiance simple et authentique.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour un apéritif ou un moment typique du Sud-Ouest.
+              </p>
+              <a href="https://www.google.com/maps?q=La+Cabane+du+Bourg+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/La-Petite-Playa.jpg" alt="La Paillote et La Petite Playa à Cazaux">
+            <div class="place-content">
+              <h3>La Paillote & La Petite Playa</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Cazaux (lac)</span>
+                <span class="place-tag">🕒 30 min</span>
+                <span class="place-tag">🗺️ 28 km</span>
+              </div>
+              <p class="place-text">
+                Deux adresses en bord de lac avec une ambiance estivale, parfaites pour déjeuner, boire un verre ou profiter d’un moment au soleil.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal après une baignade ou en fin de journée pour profiter du cadre.
+              </p>
+              <a href="https://www.google.com/maps?q=La+Paillote+Cazaux" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/lannexe.jpg" alt="L’Annexe à Biscarrosse Plage">
+            <div class="place-content">
+              <h3>L’Annexe</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse Plage</span>
+                <span class="place-tag">🕒 30 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Une adresse moderne et conviviale, idéale pour un repas simple dans une ambiance détendue après la plage.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour un dîner sans prise de tête en bord de mer.
+              </p>
+              <a href="https://www.google.com/maps?q=L+Annexe+Biscarrosse+Plage" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/surfpalace.jpg" alt="Surf Palace à Biscarrosse Plage">
+            <div class="place-content">
+              <h3>Surf Palace</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse Plage</span>
+                <span class="place-tag">🕒 30 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Restaurant à l’ambiance surf, parfait pour manger dans un cadre décontracté typique des vacances à l’océan.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal après une session plage ou surf.
+              </p>
+              <a href="https://www.google.com/maps?q=Surf+Palace+Biscarrosse+Plage" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/orestoshow.jpg" alt="Ô Resto Show à Navarrosse">
+            <div class="place-content">
+              <h3>Ô Resto Show</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Navarrosse (lac)</span>
+                <span class="place-tag">🕒 25 min</span>
+                <span class="place-tag">🗺️ 22 km</span>
+              </div>
+              <p class="place-text">
+                Restaurant en bord de lac, apprécié pour son cadre agréable et son ambiance conviviale, idéal après une journée baignade.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour prolonger la journée au lac sans changer de cadre.
+              </p>
+              <a href="https://www.google.com/maps?q=O+Resto+Show+Navarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/a-noste.jpg" alt="A Noste à Mimizan">
+            <div class="place-content">
+              <h3>A Noste</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Mimizan</span>
+                <span class="place-tag">🕒 30 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Une belle adresse à Mimizan avec une cuisine moderne et un cadre agréable, parfaite pour varier des sorties côté Biscarrosse.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal à combiner avec une journée plage ou une balade en front de mer.
+              </p>
+              <a href="https://www.google.com/maps?q=A+Noste+Mimizan" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/brasserie-mira.jpg" alt="Brasserie Mira à La Teste-de-Buch">
+            <div class="place-content">
+              <h3>Brasserie Mira</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 La Teste-de-Buch</span>
+                <span class="place-tag">🕒 40 min</span>
+                <span class="place-tag">🗺️ 45 km</span>
+              </div>
+              <p class="place-text">
+                Brasserie artisanale reconnue du bassin, proposant des bières locales à déguster sur place dans une ambiance conviviale ou à emporter.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal pour une pause en fin de journée ou pour ramener quelques bières locales.
+              </p>
+              <a href="https://www.google.com/maps?q=Brasserie+Mira+La+Teste-de-Buch" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/lagang.jpg" alt="Brasserie La Gang à Biscarrosse">
+            <div class="place-content">
+              <h3>Brasserie La Gang</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse</span>
+                <span class="place-tag">🕒 20 min</span>
+                <span class="place-tag">🗺️ 20 km</span>
+              </div>
+              <p class="place-text">
+                Micro-brasserie locale proposant des bières artisanales, avec une approche simple et authentique.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour découvrir une production locale plus confidentielle.
+              </p>
+              <a href="https://www.google.com/maps?q=Brasserie+La+Gang+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+        </div>
+      </div>
+    
+      <div id="restaurants-restaurants" class="subfilter-panel">
+        <div class="places-grid">
+    
+          <article class="place-card">
+            <img class="place-image" src="images/lou-choureut.png" alt="Restaurant Lou Choureut à Ychoux">
+            <div class="place-content">
+              <h3>Lou Choureut - Chez Hélène</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Ychoux</span>
+                <span class="place-tag">🕒 3 min</span>
+                <span class="place-tag">🗺️ 3 km</span>
+              </div>
+              <p class="place-text">
+                Restaurant convivial au cœur d’Ychoux, offrant un service souriant et attentif. On y savoure une cuisine simple, généreuse et pleine de goût, portée par une carte sans prétention mais parfaitement maîtrisée, mettant à l’honneur des produits locaux.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> situé à seulement 1,9 km. Parfait si l’on ne souhaite pas faire à manger (pensez à réserver)
+              </p>
+              <a href="https://www.google.com/maps?q=Lou+Choureut+Ychoux" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/kahut.jpeg" alt="Chez Flo Restaurant">
+            <div class="place-content">
+              <h3>Chez Flo & La Kahut</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Parentis-en-Born</span>
+                <span class="place-tag">🕒 12 min</span>
+                <span class="place-tag">🗺️ 12 km</span>
+              </div>
+              <p class="place-text">
+                Une adresse proche pour déjeuner ou dîner sans s’éloigner trop d’Ychoux, tout en profitant d’une ambiance plus animée qu’au village.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> bonne option pour combiner sortie au lac et repas sur Parentis.
+              </p>
+              <a href="https://www.google.com/maps?q=Chez+Flo+Restaurant+Parentis-en-Born" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/camette.jpg" alt="Chez Camette">
+            <div class="place-content">
+              <h3>Chez Camette</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse ville</span>
+                <span class="place-tag">🕒 22 min</span>
+                <span class="place-tag">🗺️ 20 km</span>
+              </div>
+              <p class="place-text">
+                Restaurant local convivial proposant une cuisine simple et généreuse dans une ambiance authentique.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait après une journée d’activités.
+              </p>
+              <a href="https://www.google.com/maps?q=Chez+Camette+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/coorniche.jpg" alt="La Co(o)rniche au Pyla">
+            <div class="place-content">
+              <h3>La Co(o)rniche</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Pyla-sur-Mer</span>
+                <span class="place-tag">🕒 42 min</span>
+                <span class="place-tag">🗺️ 41 km</span>
+              </div>
+              <p class="place-text">
+                Une adresse emblématique pour profiter d’un cadre exceptionnel face à l’océan, à la dune du Pilat et au Banc d’Arguin. Idéal pour un verre, un déjeuner ou un dîner avec une très belle vue.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> A réserver rapidement, endroit très populaire.
+              </p>
+              <a href="https://www.google.com/maps?q=La+Coorniche+Pyla-sur-Mer" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/epicurien.jpg" alt="L'Épicurien à Biscarrosse">
+            <div class="place-content">
+              <h3>L’Épicurien</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse ville</span>
+                <span class="place-tag">🕒 20 min</span>
+                <span class="place-tag">🗺️ 20 km</span>
+              </div>
+              <p class="place-text">
+                Une adresse reconnue pour une cuisine raffinée et travaillée, avec des produits de qualité et une présentation soignée.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal pour un dîner plus posé ou une occasion particulière.
+              </p>
+              <a href="https://www.google.com/maps?q=Restaurant+L+Epicurien+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/La-Petite-Playa.jpg" alt="La Paillote et La Petite Playa à Cazaux">
+            <div class="place-content">
+              <h3>La Paillote & La Petite Playa</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Cazaux (lac)</span>
+                <span class="place-tag">🕒 30 min</span>
+                <span class="place-tag">🗺️ 28 km</span>
+              </div>
+              <p class="place-text">
+                Deux adresses en bord de lac avec une ambiance estivale, parfaites pour déjeuner, boire un verre ou profiter d’un moment au soleil.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal après une baignade ou en fin de journée pour profiter du cadre.
+              </p>
+              <a href="https://www.google.com/maps?q=La+Paillote+Cazaux" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/lannexe.jpg" alt="L’Annexe à Biscarrosse Plage">
+            <div class="place-content">
+              <h3>L’Annexe</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse Plage</span>
+                <span class="place-tag">🕒 30 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Une adresse moderne et conviviale, idéale pour un repas simple dans une ambiance détendue après la plage.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour un dîner sans prise de tête en bord de mer.
+              </p>
+              <a href="https://www.google.com/maps?q=L+Annexe+Biscarrosse+Plage" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/surfpalace.jpg" alt="Surf Palace à Biscarrosse Plage">
+            <div class="place-content">
+              <h3>Surf Palace</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse Plage</span>
+                <span class="place-tag">🕒 30 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Restaurant à l’ambiance surf, parfait pour manger dans un cadre décontracté typique des vacances à l’océan.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal après une session plage ou surf.
+              </p>
+              <a href="https://www.google.com/maps?q=Surf+Palace+Biscarrosse+Plage" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/orestoshow.jpg" alt="Ô Resto Show à Navarrosse">
+            <div class="place-content">
+              <h3>Ô Resto Show</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Navarrosse (lac)</span>
+                <span class="place-tag">🕒 25 min</span>
+                <span class="place-tag">🗺️ 22 km</span>
+              </div>
+              <p class="place-text">
+                Restaurant en bord de lac, apprécié pour son cadre agréable et son ambiance conviviale, idéal après une journée baignade.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour prolonger la journée au lac sans changer de cadre.
+              </p>
+              <a href="https://www.google.com/maps?q=O+Resto+Show+Navarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/a-noste.jpg" alt="A Noste à Mimizan">
+            <div class="place-content">
+              <h3>A Noste</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Mimizan</span>
+                <span class="place-tag">🕒 30 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Une belle adresse à Mimizan avec une cuisine moderne et un cadre agréable, parfaite pour varier des sorties côté Biscarrosse.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal à combiner avec une journée plage ou une balade en front de mer.
+              </p>
+              <a href="https://www.google.com/maps?q=A+Noste+Mimizan" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+        </div>
+      </div>
+    
+      <div id="restaurants-bars" class="subfilter-panel">
+        <div class="places-grid">
+    
+          <article class="place-card">
+            <img class="place-image" src="images/halles-pop-parentis.png" alt="Halles Pop à Parentis-en-Born">
+            <div class="place-content">
+              <h3>Halles Pop’</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Parentis-en-Born</span>
+                <span class="place-tag">🕒 12 min</span>
+                <span class="place-tag">🗺️ 12 km</span>
+              </div>
+              <p class="place-text">
+                Une adresse vivante et décontractée à Parentis-en-Born, idéale pour partager un moment convivial autour de tapas, de plats à partager ou d’un verre entre amis ou en famille.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour une soirée plus animée, dans une ambiance vacances simple et chaleureuse.
+              </p>
+              <a href="https://www.google.com/maps?q=Halles+Pop+Parentis-en-Born" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/cabane-du-bourg.jpg" alt="La Cabane du Bourg à Biscarrosse">
+            <div class="place-content">
+              <h3>La Cabane du Bourg</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse ville</span>
+                <span class="place-tag">🕒 20 min</span>
+                <span class="place-tag">🗺️ 20 km</span>
+              </div>
+              <p class="place-text">
+                Bar à huîtres convivial pour déguster des produits frais dans une ambiance simple et authentique.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour un apéritif ou un moment typique du Sud-Ouest.
+              </p>
+              <a href="https://www.google.com/maps?q=La+Cabane+du+Bourg+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/brasserie-mira.jpg" alt="Brasserie Mira à La Teste-de-Buch">
+            <div class="place-content">
+              <h3>Brasserie Mira</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 La Teste-de-Buch</span>
+                <span class="place-tag">🕒 40 min</span>
+                <span class="place-tag">🗺️ 45 km</span>
+              </div>
+              <p class="place-text">
+                Brasserie artisanale reconnue du bassin, proposant des bières locales à déguster sur place dans une ambiance conviviale ou à emporter.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal pour une pause en fin de journée ou pour ramener quelques bières locales.
+              </p>
+              <a href="https://www.google.com/maps?q=Brasserie+Mira+La+Teste-de-Buch" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/lagang.jpg" alt="Brasserie La Gang à Biscarrosse">
+            <div class="place-content">
+              <h3>Brasserie La Gang</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse</span>
+                <span class="place-tag">🕒 20 min</span>
+                <span class="place-tag">🗺️ 20 km</span>
+              </div>
+              <p class="place-text">
+                Micro-brasserie locale proposant des bières artisanales, avec une approche simple et authentique.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour découvrir une production locale plus confidentielle.
+              </p>
+              <a href="https://www.google.com/maps?q=Brasserie+La+Gang+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+        </div>
       </div>
     </section>
     
-<section id="marches" class="category-panel">
-  <div class="category-header">
-    <h2>Marchés</h2>
-    <p>
-      Pour découvrir les produits locaux, profiter de l’ambiance estivale et flâner dans les villages voisins, les marchés sont une très belle façon de vivre le territoire pendant le séjour.
-    </p>
-  </div>
-
-  <div class="subfilter-menu">
-    <button class="subfilter-btn active" data-subtarget="marches-tous">Tous</button>
-    <button class="subfilter-btn" data-subtarget="marches-matin">Marchés du matin</button>
-    <button class="subfilter-btn" data-subtarget="marches-nocturnes">Marchés nocturnes</button>
-  </div>
-
-  <div id="marches-tous" class="subfilter-panel active">
-    <div class="places-grid">
-      <article class="place-card">
-        <img class="place-image" src="images/marche-ychoux.jpg" alt="Marché d’Ychoux">
-        <div class="place-content">
-          <h3>Marché d’Ychoux</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Ychoux</span>
-            <span class="place-tag">🕒 3 min</span>
-            <span class="place-tag">🗺️ 2,4 km</span>
-          </div>
-          <p class="place-text">
-            Mercredi matin (toute l'année) : Un petit marché pratique et agréable pour compléter ses courses de vacances, acheter quelques produits frais et profiter d’une ambiance locale simple.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> idéal pour un début de séjour ou pour préparer un déjeuner léger à la maison.
-          </p>
-          <a href="https://www.google.com/maps?q=Rue+Felix+Arnaudin+Ychoux" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
+    <section id="marches" class="category-panel">
+      <div class="category-header">
+        <h2>Marchés</h2>
+        <p>
+          Pour découvrir les produits locaux, profiter de l’ambiance estivale et flâner dans les villages voisins, les marchés sont une très belle façon de vivre le territoire pendant le séjour.
+        </p>
+      </div>
+    
+      <div class="subfilter-menu">
+        <button class="subfilter-btn active" data-subtarget="marches-tous">Tous</button>
+        <button class="subfilter-btn" data-subtarget="marches-matin">Marchés du matin</button>
+        <button class="subfilter-btn" data-subtarget="marches-nocturnes">Marchés nocturnes</button>
+      </div>
+    
+      <div id="marches-tous" class="subfilter-panel active">
+        <div class="places-grid">
+          <article class="place-card">
+            <img class="place-image" src="images/marche-ychoux.jpg" alt="Marché d’Ychoux">
+            <div class="place-content">
+              <h3>Marché d’Ychoux</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Ychoux</span>
+                <span class="place-tag">🕒 3 min</span>
+                <span class="place-tag">🗺️ 2,4 km</span>
+              </div>
+              <p class="place-text">
+                Mercredi matin (toute l'année) : Un petit marché pratique et agréable pour compléter ses courses de vacances, acheter quelques produits frais et profiter d’une ambiance locale simple.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal pour un début de séjour ou pour préparer un déjeuner léger à la maison.
+              </p>
+              <a href="https://www.google.com/maps?q=Rue+Felix+Arnaudin+Ychoux" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/marche-parentis.jpg" alt="Marché de Parentis-en-Born">
+            <div class="place-content">
+              <h3>Marché de Parentis-en-Born</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Parentis-en-Born</span>
+                <span class="place-tag">🕒 11 min</span>
+                <span class="place-tag">🗺️ 11,3 km</span>
+              </div>
+              <p class="place-text">
+                Jeudi et dimanche matin (toute l'année) : Un marché plus développé, agréable pour flâner, faire quelques achats de produits locaux et prolonger la sortie dans le centre de Parentis.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> très bien pour ramener de quoi préparer un apéritif ou un dîner aux saveurs landaises.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/marche-biscarosse-ville.png" alt="Marché de Biscarrosse-Ville">
+            <div class="place-content">
+              <h3>Marché de Biscarrosse-Ville</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse-Ville</span>
+                <span class="place-tag">🕒 21 min</span>
+                <span class="place-tag">🗺️ 20 km</span>
+              </div>
+              <p class="place-text">
+                Vendredi et samedi matin (toute l'année) : Un marché vivant et généreux, idéal pour découvrir les produits locaux, les spécialités landaises et l’ambiance typique du secteur.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour flâner le matin avant de poursuivre vers le lac ou l’océan.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+du+Marche+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/marche-bisca-plage.jpg" alt="Marché de Biscarrosse-Plage">
+            <div class="place-content">
+              <h3>Marché de Biscarrosse-Plage</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse-Plage</span>
+                <span class="place-tag">🕒 35 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Samedi matin toute l'année & tous les matins sauf jeudi l'été : Un marché très agréable en bord de station balnéaire, parfait pour mêler ambiance vacances, produits frais et promenade côté océan.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> une très bonne idée avant une journée plage.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/marche-sanguinet.png" alt="Marché de Sanguinet">
+            <div class="place-content">
+              <h3>Marché de Sanguinet</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Sanguinet</span>
+                <span class="place-tag">🕒 16 min</span>
+                <span class="place-tag">🗺️ 18 km</span>
+              </div>
+              <p class="place-text">
+                Samedi matin toute l'année & mercredi matin en plus l'été : Un marché agréable et facile d’accès, parfait pour compléter ses courses de vacances tout en découvrant l’ambiance conviviale de Sanguinet.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> très sympa à combiner avec une sortie au lac.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/marche-parentis-soir.jpg" alt="Marché nocturne de Parentis-en-Born">
+            <div class="place-content">
+              <h3>Marché nocturne de Parentis-en-Born</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Parentis-en-Born</span>
+                <span class="place-tag">🕒 11 min</span>
+                <span class="place-tag">🗺️ 11,3 km</span>
+              </div>
+              <p class="place-text">
+                Mardi soir en été : Un rendez-vous estival agréable pour profiter du centre-ville autrement, entre balade, achats et ambiance de vacances.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour une sortie simple en soirée sans trop s’éloigner de la maison.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/marche-biscarosse-plage.png" alt="Marché nocturne de Biscarrosse-Plage">
+            <div class="place-content">
+              <h3>Marché nocturne de Biscarrosse-Plage</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse-Plage</span>
+                <span class="place-tag">🕒 35 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Tous les soirs l'été : Très apprécié en saison, ce marché du soir apporte une vraie ambiance vacances après la plage, avec stands variés et promenade animée.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal pour finir la journée par une balade et une glace face à l’océan.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/marche-sanguinet-soir.jpg" alt="Marché nocturne de Sanguinet">
+            <div class="place-content">
+              <h3>Marché nocturne de Sanguinet</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Sanguinet</span>
+                <span class="place-tag">🕒 16 min</span>
+                <span class="place-tag">🗺️ 18 km</span>
+              </div>
+              <p class="place-text">
+                Mercredi & Samedi soir en été : Une sortie estivale très agréable, entre artisanat, flânerie et ambiance de vacances au cœur du bourg.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour une soirée détendue après une journée au lac.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
         </div>
-      </article>
-
-      <article class="place-card">
-        <img class="place-image" src="images/marche-parentis.jpg" alt="Marché de Parentis-en-Born">
-        <div class="place-content">
-          <h3>Marché de Parentis-en-Born</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Parentis-en-Born</span>
-            <span class="place-tag">🕒 11 min</span>
-            <span class="place-tag">🗺️ 11,3 km</span>
-          </div>
-          <p class="place-text">
-            Jeudi et dimanche matin (toute l'année) : Un marché plus développé, agréable pour flâner, faire quelques achats de produits locaux et prolonger la sortie dans le centre de Parentis.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> très bien pour ramener de quoi préparer un apéritif ou un dîner aux saveurs landaises.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
+      </div>
+    
+      <div id="marches-matin" class="subfilter-panel">
+        <div class="places-grid">
+          <article class="place-card">
+            <img class="place-image" src="images/marche-ychoux.jpg" alt="Marché d’Ychoux">
+            <div class="place-content">
+              <h3>Marché d’Ychoux</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Ychoux</span>
+                <span class="place-tag">🕒 3 min</span>
+                <span class="place-tag">🗺️ 2,4 km</span>
+              </div>
+              <p class="place-text">
+                Mercredi matin (toute l'année) : Un petit marché pratique et agréable pour compléter ses courses de vacances, acheter quelques produits frais et profiter d’une ambiance locale simple.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal pour un début de séjour ou pour préparer un déjeuner léger à la maison.
+              </p>
+              <a href="https://www.google.com/maps?q=Rue+Felix+Arnaudin+Ychoux" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/marche-parentis.jpg" alt="Marché de Parentis-en-Born">
+            <div class="place-content">
+              <h3>Marché de Parentis-en-Born</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Parentis-en-Born</span>
+                <span class="place-tag">🕒 11 min</span>
+                <span class="place-tag">🗺️ 11,3 km</span>
+              </div>
+              <p class="place-text">
+                Jeudi et dimanche matin (toute l'année) : Un marché plus développé, agréable pour flâner, faire quelques achats de produits locaux et prolonger la sortie dans le centre de Parentis.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> très bien pour ramener de quoi préparer un apéritif ou un dîner aux saveurs landaises.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/marche-biscarosse-ville.png" alt="Marché de Biscarrosse-Ville">
+            <div class="place-content">
+              <h3>Marché de Biscarrosse-Ville</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse-Ville</span>
+                <span class="place-tag">🕒 21 min</span>
+                <span class="place-tag">🗺️ 20 km</span>
+              </div>
+              <p class="place-text">
+                Vendredi et samedi matin (toute l'année) : Un marché vivant et généreux, idéal pour découvrir les produits locaux, les spécialités landaises et l’ambiance typique du secteur.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour flâner le matin avant de poursuivre vers le lac ou l’océan.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+du+Marche+Biscarrosse" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/marche-bisca-plage.jpg" alt="Marché de Biscarrosse-Plage">
+            <div class="place-content">
+              <h3>Marché de Biscarrosse-Plage</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse-Plage</span>
+                <span class="place-tag">🕒 35 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Samedi matin toute l'année & tous les matins sauf jeudi l'été : Un marché très agréable en bord de station balnéaire, parfait pour mêler ambiance vacances, produits frais et promenade côté océan.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> une très bonne idée avant une journée plage.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/marche-sanguinet.png" alt="Marché de Sanguinet">
+            <div class="place-content">
+              <h3>Marché de Sanguinet</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Sanguinet</span>
+                <span class="place-tag">🕒 16 min</span>
+                <span class="place-tag">🗺️ 18 km</span>
+              </div>
+              <p class="place-text">
+                Samedi matin toute l'année & mercredi matin en plus l'été : Un marché agréable et facile d’accès, parfait pour compléter ses courses de vacances tout en découvrant l’ambiance conviviale de Sanguinet.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> très sympa à combiner avec une sortie au lac.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
         </div>
-      </article>
-
-      <article class="place-card">
-        <img class="place-image" src="images/marche-biscarosse-ville.png" alt="Marché de Biscarrosse-Ville">
-        <div class="place-content">
-          <h3>Marché de Biscarrosse-Ville</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Biscarrosse-Ville</span>
-            <span class="place-tag">🕒 21 min</span>
-            <span class="place-tag">🗺️ 20 km</span>
-          </div>
-          <p class="place-text">
-            Vendredi et samedi matin (toute l'année) : Un marché vivant et généreux, idéal pour découvrir les produits locaux, les spécialités landaises et l’ambiance typique du secteur.
+      </div>
+    
+      <div id="marches-nocturnes" class="subfilter-panel">
+        <div class="section-note">
+          <h3>Marchés nocturnes</h3>
+          <p>
+            En été, plusieurs stations voisines proposent aussi des marchés du soir, très agréables pour se promener, boire un verre ou prolonger la journée dans une ambiance plus animée.
           </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> parfait pour flâner le matin avant de poursuivre vers le lac ou l’océan.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+du+Marche+Biscarrosse" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
         </div>
-      </article>
-
-      <article class="place-card">
-        <img class="place-image" src="images/marche-bisca-plage.jpg" alt="Marché de Biscarrosse-Plage">
-        <div class="place-content">
-          <h3>Marché de Biscarrosse-Plage</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Biscarrosse-Plage</span>
-            <span class="place-tag">🕒 35 min</span>
-            <span class="place-tag">🗺️ 30 km</span>
-          </div>
-          <p class="place-text">
-            Samedi matin toute l'année & tous les matins sauf jeudi l'été : Un marché très agréable en bord de station balnéaire, parfait pour mêler ambiance vacances, produits frais et promenade côté océan.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> une très bonne idée avant une journée plage.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
+    
+        <div class="places-grid" style="margin-top: 28px;">
+          <article class="place-card">
+            <img class="place-image" src="images/marche-parentis-soir.jpg" alt="Marché nocturne de Parentis-en-Born">
+            <div class="place-content">
+              <h3>Marché nocturne de Parentis-en-Born</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Parentis-en-Born</span>
+                <span class="place-tag">🕒 11 min</span>
+                <span class="place-tag">🗺️ 11,3 km</span>
+              </div>
+              <p class="place-text">
+                Mardi soir en été : Un rendez-vous estival agréable pour profiter du centre-ville autrement, entre balade, achats et ambiance de vacances.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour une sortie simple en soirée sans trop s’éloigner de la maison.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/marche-biscarosse-plage.png" alt="Marché nocturne de Biscarrosse-Plage">
+            <div class="place-content">
+              <h3>Marché nocturne de Biscarrosse-Plage</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Biscarrosse-Plage</span>
+                <span class="place-tag">🕒 35 min</span>
+                <span class="place-tag">🗺️ 30 km</span>
+              </div>
+              <p class="place-text">
+                Tous les soirs l'été : Très apprécié en saison, ce marché du soir apporte une vraie ambiance vacances après la plage, avec stands variés et promenade animée.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> idéal pour finir la journée par une balade et une glace face à l’océan.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
+    
+          <article class="place-card">
+            <img class="place-image" src="images/marche-sanguinet-soir.jpg" alt="Marché nocturne de Sanguinet">
+            <div class="place-content">
+              <h3>Marché nocturne de Sanguinet</h3>
+              <div class="place-meta">
+                <span class="place-tag">📌 Sanguinet</span>
+                <span class="place-tag">🕒 16 min</span>
+                <span class="place-tag">🗺️ 18 km</span>
+              </div>
+              <p class="place-text">
+                Mercredi & Samedi soir en été : Une sortie estivale très agréable, entre artisanat, flânerie et ambiance de vacances au cœur du bourg.
+              </p>
+              <p class="place-tip">
+                <strong>Astuce :</strong> parfait pour une soirée détendue après une journée au lac.
+              </p>
+              <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
+                📍 Voir sur la carte
+              </a>
+            </div>
+          </article>
         </div>
-      </article>
-
-      <article class="place-card">
-        <img class="place-image" src="images/marche-sanguinet.png" alt="Marché de Sanguinet">
-        <div class="place-content">
-          <h3>Marché de Sanguinet</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Sanguinet</span>
-            <span class="place-tag">🕒 16 min</span>
-            <span class="place-tag">🗺️ 18 km</span>
-          </div>
-          <p class="place-text">
-            Samedi matin toute l'année & mercredi matin en plus l'été : Un marché agréable et facile d’accès, parfait pour compléter ses courses de vacances tout en découvrant l’ambiance conviviale de Sanguinet.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> très sympa à combiner avec une sortie au lac.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
-        </div>
-      </article>
-
-      <article class="place-card">
-        <img class="place-image" src="images/marche-parentis-soir.jpg" alt="Marché nocturne de Parentis-en-Born">
-        <div class="place-content">
-          <h3>Marché nocturne de Parentis-en-Born</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Parentis-en-Born</span>
-            <span class="place-tag">🕒 11 min</span>
-            <span class="place-tag">🗺️ 11,3 km</span>
-          </div>
-          <p class="place-text">
-            Mardi soir en été : Un rendez-vous estival agréable pour profiter du centre-ville autrement, entre balade, achats et ambiance de vacances.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> parfait pour une sortie simple en soirée sans trop s’éloigner de la maison.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
-        </div>
-      </article>
-
-      <article class="place-card">
-        <img class="place-image" src="images/marche-biscarosse-plage.png" alt="Marché nocturne de Biscarrosse-Plage">
-        <div class="place-content">
-          <h3>Marché nocturne de Biscarrosse-Plage</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Biscarrosse-Plage</span>
-            <span class="place-tag">🕒 35 min</span>
-            <span class="place-tag">🗺️ 30 km</span>
-          </div>
-          <p class="place-text">
-            Tous les soirs l'été : Très apprécié en saison, ce marché du soir apporte une vraie ambiance vacances après la plage, avec stands variés et promenade animée.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> idéal pour finir la journée par une balade et une glace face à l’océan.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
-        </div>
-      </article>
-
-      <article class="place-card">
-        <img class="place-image" src="images/marche-sanguinet-soir.jpg" alt="Marché nocturne de Sanguinet">
-        <div class="place-content">
-          <h3>Marché nocturne de Sanguinet</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Sanguinet</span>
-            <span class="place-tag">🕒 16 min</span>
-            <span class="place-tag">🗺️ 18 km</span>
-          </div>
-          <p class="place-text">
-            Mercredi & Samedi soir en été : Une sortie estivale très agréable, entre artisanat, flânerie et ambiance de vacances au cœur du bourg.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> parfait pour une soirée détendue après une journée au lac.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <div id="marches-matin" class="subfilter-panel">
-    <div class="places-grid">
-      <article class="place-card">
-        <img class="place-image" src="images/marche-ychoux.jpg" alt="Marché d’Ychoux">
-        <div class="place-content">
-          <h3>Marché d’Ychoux</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Ychoux</span>
-            <span class="place-tag">🕒 3 min</span>
-            <span class="place-tag">🗺️ 2,4 km</span>
-          </div>
-          <p class="place-text">
-            Mercredi matin (toute l'année) : Un petit marché pratique et agréable pour compléter ses courses de vacances, acheter quelques produits frais et profiter d’une ambiance locale simple.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> idéal pour un début de séjour ou pour préparer un déjeuner léger à la maison.
-          </p>
-          <a href="https://www.google.com/maps?q=Rue+Felix+Arnaudin+Ychoux" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
-        </div>
-      </article>
-
-      <article class="place-card">
-        <img class="place-image" src="images/marche-parentis.jpg" alt="Marché de Parentis-en-Born">
-        <div class="place-content">
-          <h3>Marché de Parentis-en-Born</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Parentis-en-Born</span>
-            <span class="place-tag">🕒 11 min</span>
-            <span class="place-tag">🗺️ 11,3 km</span>
-          </div>
-          <p class="place-text">
-            Jeudi et dimanche matin (toute l'année) : Un marché plus développé, agréable pour flâner, faire quelques achats de produits locaux et prolonger la sortie dans le centre de Parentis.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> très bien pour ramener de quoi préparer un apéritif ou un dîner aux saveurs landaises.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
-        </div>
-      </article>
-
-      <article class="place-card">
-        <img class="place-image" src="images/marche-biscarosse-ville.png" alt="Marché de Biscarrosse-Ville">
-        <div class="place-content">
-          <h3>Marché de Biscarrosse-Ville</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Biscarrosse-Ville</span>
-            <span class="place-tag">🕒 21 min</span>
-            <span class="place-tag">🗺️ 20 km</span>
-          </div>
-          <p class="place-text">
-            Vendredi et samedi matin (toute l'année) : Un marché vivant et généreux, idéal pour découvrir les produits locaux, les spécialités landaises et l’ambiance typique du secteur.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> parfait pour flâner le matin avant de poursuivre vers le lac ou l’océan.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+du+Marche+Biscarrosse" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
-        </div>
-      </article>
-
-      <article class="place-card">
-        <img class="place-image" src="images/marche-bisca-plage.jpg" alt="Marché de Biscarrosse-Plage">
-        <div class="place-content">
-          <h3>Marché de Biscarrosse-Plage</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Biscarrosse-Plage</span>
-            <span class="place-tag">🕒 35 min</span>
-            <span class="place-tag">🗺️ 30 km</span>
-          </div>
-          <p class="place-text">
-            Samedi matin toute l'année & tous les matins sauf jeudi l'été : Un marché très agréable en bord de station balnéaire, parfait pour mêler ambiance vacances, produits frais et promenade côté océan.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> une très bonne idée avant une journée plage.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
-        </div>
-      </article>
-
-      <article class="place-card">
-        <img class="place-image" src="images/marche-sanguinet.png" alt="Marché de Sanguinet">
-        <div class="place-content">
-          <h3>Marché de Sanguinet</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Sanguinet</span>
-            <span class="place-tag">🕒 16 min</span>
-            <span class="place-tag">🗺️ 18 km</span>
-          </div>
-          <p class="place-text">
-            Samedi matin toute l'année & mercredi matin en plus l'été : Un marché agréable et facile d’accès, parfait pour compléter ses courses de vacances tout en découvrant l’ambiance conviviale de Sanguinet.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> très sympa à combiner avec une sortie au lac.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <div id="marches-nocturnes" class="subfilter-panel">
-    <div class="section-note">
-      <h3>Marchés nocturnes</h3>
-      <p>
-        En été, plusieurs stations voisines proposent aussi des marchés du soir, très agréables pour se promener, boire un verre ou prolonger la journée dans une ambiance plus animée.
-      </p>
-    </div>
-
-    <div class="places-grid" style="margin-top: 28px;">
-      <article class="place-card">
-        <img class="place-image" src="images/marche-parentis-soir.jpg" alt="Marché nocturne de Parentis-en-Born">
-        <div class="place-content">
-          <h3>Marché nocturne de Parentis-en-Born</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Parentis-en-Born</span>
-            <span class="place-tag">🕒 11 min</span>
-            <span class="place-tag">🗺️ 11,3 km</span>
-          </div>
-          <p class="place-text">
-            Mardi soir en été : Un rendez-vous estival agréable pour profiter du centre-ville autrement, entre balade, achats et ambiance de vacances.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> parfait pour une sortie simple en soirée sans trop s’éloigner de la maison.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+du+General+de+Gaulle+Parentis-en-Born" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
-        </div>
-      </article>
-
-      <article class="place-card">
-        <img class="place-image" src="images/marche-biscarosse-plage.png" alt="Marché nocturne de Biscarrosse-Plage">
-        <div class="place-content">
-          <h3>Marché nocturne de Biscarrosse-Plage</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Biscarrosse-Plage</span>
-            <span class="place-tag">🕒 35 min</span>
-            <span class="place-tag">🗺️ 30 km</span>
-          </div>
-          <p class="place-text">
-            Tous les soirs l'été : Très apprécié en saison, ce marché du soir apporte une vraie ambiance vacances après la plage, avec stands variés et promenade animée.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> idéal pour finir la journée par une balade et une glace face à l’océan.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+Dufau+Biscarrosse+Plage" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
-        </div>
-      </article>
-
-      <article class="place-card">
-        <img class="place-image" src="images/marche-sanguinet-soir.jpg" alt="Marché nocturne de Sanguinet">
-        <div class="place-content">
-          <h3>Marché nocturne de Sanguinet</h3>
-          <div class="place-meta">
-            <span class="place-tag">📌 Sanguinet</span>
-            <span class="place-tag">🕒 16 min</span>
-            <span class="place-tag">🗺️ 18 km</span>
-          </div>
-          <p class="place-text">
-            Mercredi & Samedi soir en été : Une sortie estivale très agréable, entre artisanat, flânerie et ambiance de vacances au cœur du bourg.
-          </p>
-          <p class="place-tip">
-            <strong>Astuce :</strong> parfait pour une soirée détendue après une journée au lac.
-          </p>
-          <a href="https://www.google.com/maps?q=Place+du+Marche+Sanguinet" target="_blank" class="map-button">
-            📍 Voir sur la carte
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
     
     <section id="courses" class="category-panel">
       <div class="category-header">
