@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informations | MUSARDE</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .info-section {
+      margin-bottom: 60px;
+    }
+
+    .info-section h2 {
+      margin-bottom: 16px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .info-card {
+      background: var(--blanc-casse);
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: var(--ombre-legere);
+    }
+
+    .logement {
+      background: var(--blanc-casse);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 30px;
+      box-shadow: var(--ombre-legere);
+    }
+
+    .logement h3 {
+      margin-top: 0;
+      color: var(--vert-pin);
+    }
+
+    .logement-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .tag {
+      background: rgba(122, 144, 150, 0.15);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .cta-box {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .cta-box a {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: var(--soleil);
+      color: var(--vert-pin);
+      font-weight: 600;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="logo">MUSARDE</a>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="maison.html">La maison</a>
+        <a href="activites.html">Activités</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <div class="page-header">
+      <h1>Informations</h1>
+      <p>
+        Retrouvez ici les informations essentielles sur les logements, les équipements et l’organisation du séjour.
+      </p>
+    </div>
+
+    <!-- Vue d'ensemble -->
+    <section class="info-section">
+      <h2>Vue d’ensemble</h2>
+      <p>
+        MUSARDE se compose de trois logements indépendants situés sur une même propriété, au cœur d’un environnement calme et naturel.
+      </p>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <strong>Capacité totale</strong>
+          <p>Jusqu’à XX personnes</p>
+        </div>
+
+        <div class="info-card">
+          <strong>Nombre de logements</strong>
+          <p>3 logements indépendants</p>
+        </div>
+
+        <div class="info-card">
+          <strong>Environnement</strong>
+          <p>Terrain spacieux, calme et arboré</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extérieurs -->
+    <section class="info-section">
+      <h2>Extérieurs & espaces communs</h2>
+
+      <div class="info-grid">
+        <div class="info-card">Grand terrain</div>
+        <div class="info-card">Espace détente</div>
+        <div class="info-card">Stationnement sur place</div>
+        <div class="info-card">Mobilier extérieur</div>
+      </div>
+    </section>
+
+    <!-- Logements -->
+    <section class="info-section">
+      <h2>Les logements</h2>
+
+      <div class="logement">
+        <h3>Dune</h3>
+        <div class="logement-meta">
+          <span class="tag">X personnes</span>
+          <span class="tag">X chambres</span>
+          <span class="tag">Cuisine équipée</span>
+        </div>
+        <p>
+          Logement confortable et lumineux, idéal pour un séjour en famille ou entre amis, avec un accès direct aux extérieurs.
+        </p>
+      </div>
+
+      <div class="logement">
+        <h3>Pin</h3>
+        <div class="logement-meta">
+          <span class="tag">X personnes</span>
+          <span class="tag">X chambres</span>
+          <span class="tag">Terrasse</span>
+        </div>
+        <p>
+          Un espace chaleureux et fonctionnel, parfait pour profiter d’un séjour simple et agréable dans un cadre naturel.
+        </p>
+      </div>
+
+      <div class="logement">
+        <h3>Kbane</h3>
+        <div class="logement-meta">
+          <span class="tag">X personnes</span>
+          <span class="tag">Studio / T2</span>
+          <span class="tag">Indépendant</span>
+        </div>
+        <p>
+          Logement indépendant, idéal pour un séjour plus intime ou pour compléter la capacité globale de la propriété.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Équipements -->
+    <section class="info-section">
+      <h2>Équipements</h2>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <strong>Confort</strong>
+          <p>WiFi, chauffage, équipements de base</p>
+        </div>
+
+        <div class="info-card">
+          <strong>Cuisine</strong>
+          <p>Vaisselle, électroménager, cafetière</p>
+        </div>
+
+        <div class="info-card">
+          <strong>Pratique</strong>
+          <p>Linge de maison, rangement, etc.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infos pratiques -->
+    <section class="info-section">
+      <h2>Informations pratiques</h2>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <strong>Arrivée</strong>
+          <p>À partir de XXh</p>
+        </div>
+
+        <div class="info-card">
+          <strong>Départ</strong>
+          <p>Avant XXh</p>
+        </div>
+
+        <div class="info-card">
+          <strong>Stationnement</strong>
+          <p>Sur place</p>
+        </div>
+
+        <div class="info-card">
+          <strong>Règles</strong>
+          <p>Logement non-fumeur</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-box">
+      <a href="galerie.html">Voir les photos</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>© MUSARDE – Maison de vacances à Ychoux</p>
+      <p class="footer-signature">Une maison pour ralentir</p>
+    </div>
+  </footer>
+
+</body>
+</html>
