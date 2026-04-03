@@ -5,6 +5,352 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La maison | MUSARDE</title>
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .house-intro {
+      max-width: 920px;
+    }
+
+    .section-block {
+      margin-top: 72px;
+    }
+
+    .section-block h2 {
+      margin-bottom: 14px;
+    }
+
+    .section-block > p {
+      max-width: 980px;
+      margin-bottom: 26px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .info-card {
+      background: var(--blanc-casse);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--ombre-legere);
+      border: 1px solid rgba(47, 62, 52, 0.06);
+    }
+
+    .info-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: var(--vert-pin);
+      font-size: 1.2rem;
+    }
+
+    .info-card p {
+      margin: 0;
+    }
+
+    .overview-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-card {
+      background: var(--blanc-casse);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--ombre-legere);
+      border: 1px solid rgba(47, 62, 52, 0.06);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+      background: #d9dedb;
+    }
+
+    .hero-content {
+      padding: 26px;
+    }
+
+    .hero-content h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: var(--vert-pin);
+      font-size: 1.5rem;
+    }
+
+    .hero-content p {
+      margin: 0;
+    }
+
+    .summary-box {
+      background: var(--blanc-casse);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--ombre-legere);
+      border: 1px solid rgba(47, 62, 52, 0.06);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .summary-box h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: var(--vert-pin);
+      font-size: 1.45rem;
+    }
+
+    .summary-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .summary-list li {
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(122, 144, 150, 0.10);
+      font-weight: 600;
+      color: var(--vert-pin);
+    }
+
+    .highlight-note {
+      margin-top: 28px;
+      background: rgba(255, 255, 255, 0.34);
+      border-radius: 18px;
+      padding: 24px;
+      border-left: 4px solid var(--soleil);
+    }
+
+    .highlight-note p {
+      margin: 0;
+    }
+
+    .filter-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .filter-btn {
+      border: none;
+      cursor: pointer;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--blanc-casse);
+      color: var(--vert-pin);
+      border: 1px solid rgba(47, 62, 52, 0.08);
+      box-shadow: var(--ombre-legere);
+      font-weight: 700;
+      font-size: 0.98rem;
+      transition: 0.25s ease;
+      font-family: inherit;
+    }
+
+    .filter-btn:hover {
+      background: rgba(217, 184, 106, 0.20);
+      transform: translateY(-1px);
+    }
+
+    .filter-btn.active {
+      background: var(--soleil);
+      color: var(--vert-pin);
+      box-shadow: 0 8px 22px rgba(47, 62, 52, 0.12);
+    }
+
+    .filter-btn:focus-visible,
+    .cta-button:focus-visible {
+      outline: 3px solid rgba(217, 184, 106, 0.45);
+      outline-offset: 3px;
+    }
+
+    .lodgings-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .lodging-card {
+      background: var(--blanc-casse);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--ombre-legere);
+      border: 1px solid rgba(47, 62, 52, 0.06);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .lodging-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 34px rgba(47, 62, 52, 0.12);
+    }
+
+    .lodging-image {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+      background: #d9dedb;
+    }
+
+    .lodging-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      height: 100%;
+    }
+
+    .lodging-content h3 {
+      margin: 0;
+      color: var(--vert-pin);
+      font-size: 1.7rem;
+      line-height: 1.15;
+    }
+
+    .lodging-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .lodging-tag {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(122, 144, 150, 0.12);
+      color: var(--vert-pin);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .lodging-text {
+      margin: 0;
+    }
+
+    .lodging-tip {
+      margin: 0;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(217, 184, 106, 0.12);
+      border-left: 4px solid var(--soleil);
+    }
+
+    .lodging-tip strong {
+      color: var(--vert-pin);
+    }
+
+    .lodging-actions {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: rgba(47, 62, 52, 0.08);
+      color: var(--vert-pin);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-align: center;
+      transition: 0.25s ease;
+    }
+
+    .cta-button:hover {
+      background: var(--soleil);
+      color: var(--vert-pin);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .cta-section {
+      margin-top: 72px;
+      background: var(--blanc-casse);
+      border-radius: 24px;
+      padding: 34px 30px;
+      box-shadow: var(--ombre-legere);
+      border: 1px solid rgba(47, 62, 52, 0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .cta-section h3 {
+      margin: 0 0 10px 0;
+      color: var(--vert-pin);
+      font-size: 1.45rem;
+    }
+
+    .cta-section p {
+      margin: 0;
+      max-width: 760px;
+    }
+
+    .lodging-item {
+      display: block;
+    }
+
+    .lodging-item.hidden {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .overview-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .cta-section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .filter-menu {
+        gap: 10px;
+      }
+
+      .filter-btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero-image,
+      .lodging-image {
+        height: 210px;
+      }
+
+      .hero-content,
+      .summary-box,
+      .info-card,
+      .lodging-content,
+      .cta-section {
+        padding: 22px;
+      }
+
+      .lodging-content h3 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -13,7 +359,9 @@
       <a href="index.html" class="logo">MUSARDE</a>
       <nav>
         <a href="index.html">Accueil</a>
-        <a href="maison.html" class="active">La maison</a>
+        <a href="maison.html" class="active">Maison</a>
+        <a href="informations.html">Informations</a>
+        <a href="galerie.html">Galerie photo</a>
         <a href="activites.html">Activités</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -23,39 +371,197 @@
   <main>
     <div class="page-header">
       <h1>La maison</h1>
-      <p>
-        Une maison de vacances pensée pour un séjour simple, confortable et apaisant.
+      <p class="house-intro">
+        MUSARDE réunit trois logements indépendants au sein d’une même propriété, dans un cadre calme, arboré et pensé pour des séjours simples, confortables et apaisants. Cette page permet de découvrir l’esprit du lieu, les extérieurs et les différents hébergements.
       </p>
     </div>
 
-    <div class="box">
+    <section class="section-block">
+      <h2>Vue d’ensemble</h2>
       <p>
-        Cette page présentera prochainement la maison en détail : capacité d’accueil, pièces,
-        équipements, ambiance, extérieur et informations pratiques.
+        Un lieu de séjour conçu pour profiter du calme landais, d’un grand terrain et d’une organisation souple, que l’on vienne en couple, en famille ou à plusieurs.
       </p>
+
+      <div class="overview-layout">
+        <article class="hero-card">
+          <img class="hero-image" src="images/maison-ensemble.jpg" alt="Vue d’ensemble de la propriété MUSARDE">
+          <div class="hero-content">
+            <h3>Une propriété pensée pour respirer</h3>
+            <p>
+              La propriété accueille trois logements distincts au sein d’un même ensemble. L’ambiance générale privilégie l’espace, la tranquillité et un rapport simple aux extérieurs, avec de belles possibilités de circulation, de détente et de stationnement.
+            </p>
+          </div>
+        </article>
+
+        <aside class="summary-box">
+          <h3>En bref</h3>
+          <ul class="summary-list">
+            <li>Capacité totale : jusqu’à XX personnes</li>
+            <li>3 logements indépendants</li>
+            <li>Grand terrain arboré</li>
+            <li>Extérieurs et stationnement sur place</li>
+            <li>Organisation adaptée aux séjours à plusieurs</li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="highlight-note">
+        <p>
+          Cette page présente l’essentiel de la propriété et des logements. Les informations pratiques détaillées, les règles du séjour et le fonctionnement précis des équipements seront regroupés dans la page <strong>Informations</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <h2>Extérieurs & espaces communs</h2>
       <p>
-        Nous pourrons y intégrer ensuite les couchages, la description des espaces,
-        les équipements de cuisine, le wifi, le stationnement, les extérieurs
-        et tous les éléments utiles à la préparation du séjour.
+        Les extérieurs participent pleinement à l’expérience du séjour. Le lieu a été pensé pour offrir de l’espace, une ambiance calme et une vraie sensation de respiration autour des logements.
       </p>
-    </div>
 
-    <div class="card-grid">
-      <div class="card">
-        <h3>Confort</h3>
-        <p>Présentation des pièces, couchages et équipements du quotidien.</p>
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Grand terrain</h3>
+          <p>
+            Une propriété spacieuse permettant de profiter pleinement de l’environnement, avec une belle sensation d’ouverture et de tranquillité.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Ambiance naturelle</h3>
+          <p>
+            Un cadre arboré et apaisant, propice au repos, aux séjours en famille et aux moments simples en extérieur.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Espaces de détente</h3>
+          <p>
+            Des extérieurs pensés pour ralentir, prendre un repas dehors, lire, discuter ou simplement profiter du calme.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Stationnement</h3>
+          <p>
+            Le stationnement s’effectue directement sur la propriété, dans des conditions simples et pratiques pour les voyageurs.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <h2>Les logements</h2>
+      <p>
+        Les trois logements permettent d’adapter le séjour selon les besoins, les envies et la composition du groupe. Chaque espace possède sa propre identité et son propre fonctionnement.
+      </p>
+
+      <div class="filter-menu">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="dune">Dune</button>
+        <button class="filter-btn" data-filter="pin">Pin</button>
+        <button class="filter-btn" data-filter="kbane">Kbane</button>
       </div>
 
-      <div class="card">
-        <h3>Ambiance</h3>
-        <p>Esprit de la maison, atmosphère, décoration et cadre général.</p>
-      </div>
+      <div class="lodgings-grid">
+        <article class="lodging-card lodging-item dune">
+          <img class="lodging-image" src="images/logement-dune.jpg" alt="Logement Dune">
+          <div class="lodging-content">
+            <h3>Dune</h3>
 
-      <div class="card">
-        <h3>Infos pratiques</h3>
-        <p>Accès, stationnement, arrivée, départ et éléments utiles aux voyageurs.</p>
+            <div class="lodging-tags">
+              <span class="lodging-tag">X personnes</span>
+              <span class="lodging-tag">X chambres</span>
+              <span class="lodging-tag">Cuisine équipée</span>
+            </div>
+
+            <p class="lodging-text">
+              Un logement confortable et lumineux, pensé pour accueillir un séjour agréable en famille ou entre amis, dans une ambiance simple et reposante.
+            </p>
+
+            <p class="lodging-tip">
+              <strong>Astuce :</strong> idéal pour un séjour principal avec un bon niveau de confort et un accès pratique aux extérieurs.
+            </p>
+
+            <div class="lodging-actions">
+              <a href="galerie.html" class="cta-button">Voir les photos</a>
+              <a href="informations.html" class="cta-button">Voir les informations</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="lodging-card lodging-item pin">
+          <img class="lodging-image" src="images/logement-pin.jpg" alt="Logement Pin">
+          <div class="lodging-content">
+            <h3>Pin</h3>
+
+            <div class="lodging-tags">
+              <span class="lodging-tag">X personnes</span>
+              <span class="lodging-tag">X chambres</span>
+              <span class="lodging-tag">Terrasse</span>
+            </div>
+
+            <p class="lodging-text">
+              Un espace chaleureux et fonctionnel, idéal pour profiter d’un séjour simple, fluide et agréable dans un environnement calme.
+            </p>
+
+            <p class="lodging-tip">
+              <strong>Astuce :</strong> parfait pour ceux qui recherchent une ambiance conviviale et un hébergement facile à vivre au quotidien.
+            </p>
+
+            <div class="lodging-actions">
+              <a href="galerie.html" class="cta-button">Voir les photos</a>
+              <a href="informations.html" class="cta-button">Voir les informations</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="lodging-card lodging-item kbane">
+          <img class="lodging-image" src="images/logement-kbane.jpg" alt="Logement Kbane">
+          <div class="lodging-content">
+            <h3>Kbane</h3>
+
+            <div class="lodging-tags">
+              <span class="lodging-tag">X personnes</span>
+              <span class="lodging-tag">Studio / T2</span>
+              <span class="lodging-tag">Indépendant</span>
+            </div>
+
+            <p class="lodging-text">
+              Un logement indépendant, idéal pour un séjour plus intime, pour compléter la capacité globale de la propriété ou pour offrir davantage d’autonomie.
+            </p>
+
+            <p class="lodging-tip">
+              <strong>Astuce :</strong> très bien pour un couple, une petite unité familiale ou comme logement complémentaire dans un séjour à plusieurs.
+            </p>
+
+            <div class="lodging-actions">
+              <a href="galerie.html" class="cta-button">Voir les photos</a>
+              <a href="informations.html" class="cta-button">Voir les informations</a>
+            </div>
+          </div>
+        </article>
       </div>
-    </div>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <h3>Besoin de plus de détails ?</h3>
+        <p>
+          Les horaires d’arrivée et de départ, les règles du séjour, les équipements détaillés et les informations pratiques seront regroupés dans une page dédiée pour garder cette présentation claire et agréable à parcourir.
+        </p>
+      </div>
+      <a href="informations.html" class="cta-button">Voir les informations</a>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <h3>Découvrir le lieu en images</h3>
+        <p>
+          La galerie photo permettra de distinguer les photos des extérieurs, des espaces communs et de chacun des trois logements, pour que chaque voyageur puisse se repérer immédiatement.
+        </p>
+      </div>
+      <a href="galerie.html" class="cta-button">Voir la galerie photo</a>
+    </section>
   </main>
 
   <footer>
@@ -64,6 +570,33 @@
       <p class="footer-signature">Une maison pour ralentir</p>
     </div>
   </footer>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const lodgingItems = document.querySelectorAll('.lodging-item');
+
+    function filterLodgings(filterValue) {
+      filterButtons.forEach((button) => {
+        button.classList.toggle('active', button.dataset.filter === filterValue);
+      });
+
+      lodgingItems.forEach((item) => {
+        const shouldShow = filterValue === 'all' || item.classList.contains(filterValue);
+        item.classList.toggle('hidden', !shouldShow);
+      });
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        filterLodgings(button.dataset.filter);
+      });
+    });
+
+    const defaultButton = document.querySelector('.filter-btn.active');
+    if (defaultButton) {
+      filterLodgings(defaultButton.dataset.filter);
+    }
+  </script>
 
 </body>
 </html>
