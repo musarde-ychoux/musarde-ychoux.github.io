@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerie photo | MUSARDE</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .gallery-hero {
+      padding: 70px 0 28px 0;
+    }
+
+    .gallery-hero h1 {
+      margin-bottom: 14px;
+    }
+
+    .gallery-intro {
+      max-width: 900px;
+      font-size: 1.08rem;
+    }
+
+    .gallery-filter-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+      margin-bottom: 36px;
+    }
+
+    .gallery-filter-btn {
+      border: none;
+      cursor: pointer;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--blanc-casse);
+      color: var(--vert-pin);
+      border: 1px solid rgba(47, 62, 52, 0.08);
+      box-shadow: var(--ombre-legere);
+      font-weight: 700;
+      font-size: 0.98rem;
+      transition: 0.25s ease;
+      font-family: inherit;
+    }
+
+    .gallery-filter-btn:hover {
+      background: rgba(217, 184, 106, 0.18);
+      transform: translateY(-1px);
+    }
+
+    .gallery-filter-btn.active {
+      background: var(--soleil);
+      color: var(--vert-pin);
+      box-shadow: 0 8px 22px rgba(47, 62, 52, 0.12);
+    }
+
+    .gallery-filter-btn:focus-visible,
+    .gallery-item:focus-visible,
+    .lightbox-close:focus-visible,
+    .lightbox-prev:focus-visible,
+    .lightbox-next:focus-visible {
+      outline: 3px solid rgba(217, 184, 106, 0.45);
+      outline-offset: 3px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+
+    .gallery-item {
+      grid-column: span 4;
+      position: relative;
+      border: none;
+      padding: 0;
+      background: none;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 22px;
+      box-shadow: var(--ombre-legere);
+      min-height: 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item.large {
+      grid-column: span 8;
+    }
+
+    .gallery-item.tall {
+      min-height: 420px;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 34px rgba(47, 62, 52, 0.14);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s ease;
+      background: #d9dedb;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      background: linear-gradient(
+        to top,
+        rgba(20, 28, 23, 0.72) 0%,
+        rgba(20, 28, 23, 0.34) 38%,
+        rgba(20, 28, 23, 0.00) 72%
+      );
+    }
+
+    .gallery-caption {
+      color: white;
+      text-align: left;
+    }
+
+    .gallery-caption span {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #f1e7c8;
+      margin-bottom: 8px;
+    }
+
+    .gallery-caption strong {
+      display: block;
+      font-size: 1.2rem;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .gallery-note {
+      background: var(--blanc-casse);
+      border-radius: 22px;
+      padding: 28px;
+      border-left: 5px solid var(--soleil);
+      box-shadow: var(--ombre-legere);
+      margin-bottom: 24px;
+    }
+
+    .gallery-note p {
+      margin: 0;
+      max-width: 940px;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(12, 18, 15, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 3000;
+      padding: 30px;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      width: min(1200px, 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .lightbox-image-wrap {
+      width: 100%;
+      max-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-image {
+      max-width: 100%;
+      max-height: 80vh;
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      background: #d9dedb;
+    }
+
+    .lightbox-caption {
+      color: white;
+      text-align: center;
+      max-width: 900px;
+    }
+
+    .lightbox-caption .lightbox-kicker {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: #f1e7c8;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .lightbox-caption strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+
+    .lightbox-caption p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+      position: absolute;
+      border: none;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.12);
+      color: white;
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      font-size: 1.2rem;
+      transition: 0.25s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .lightbox-close:hover,
+    .lightbox-prev:hover,
+    .lightbox-next:hover {
+      background: var(--soleil);
+      color: var(--vert-pin);
+    }
+
+    .lightbox-close {
+      top: -6px;
+      right: 0;
+    }
+
+    .lightbox-prev {
+      left: -72px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .lightbox-next {
+      right: -72px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @media (max-width: 1100px) {
+      .gallery-item,
+      .gallery-item.large {
+        grid-column: span 6;
+      }
+
+      .lightbox-prev {
+        left: 10px;
+      }
+
+      .lightbox-next {
+        right: 10px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .gallery-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .gallery-item,
+      .gallery-item.large {
+        grid-column: span 1;
+        min-height: 250px;
+      }
+
+      .gallery-item.tall {
+        min-height: 320px;
+      }
+
+      .gallery-filter-btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .lightbox {
+        padding: 16px;
+      }
+
+      .lightbox-close {
+        top: -2px;
+        right: 0;
+      }
+
+      .lightbox-prev,
+      .lightbox-next {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+        top: auto;
+        bottom: -56px;
+        transform: none;
+      }
+
+      .lightbox-prev {
+        left: calc(50% - 52px);
+      }
+
+      .lightbox-next {
+        right: calc(50% - 52px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="logo">MUSARDE</a>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="maison.html">Maison</a>
+        <a href="informations.html">Informations</a>
+        <a href="galerie.html" class="active">Galerie photo</a>
+        <a href="activites.html">Activités</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section class="gallery-hero">
+      <h1>Galerie photo</h1>
+      <p class="gallery-intro">
+        Découvrez MUSARDE en images à travers les extérieurs, les espaces communs et chacun des trois logements. La galerie a été pensée pour permettre à chaque voyageur de se repérer facilement et de retrouver rapidement les photos qui correspondent à son hébergement.
+      </p>
+
+      <div class="gallery-filter-menu">
+        <button class="gallery-filter-btn active" data-filter="all">Toutes</button>
+        <button class="gallery-filter-btn" data-filter="ensemble">Vue d’ensemble</button>
+        <button class="gallery-filter-btn" data-filter="communs">Extérieurs & espaces communs</button>
+        <button class="gallery-filter-btn" data-filter="dune">Dune</button>
+        <button class="gallery-filter-btn" data-filter="pin">Pin</button>
+        <button class="gallery-filter-btn" data-filter="kbane">Kbane</button>
+      </div>
+    </section>
+
+    <div class="gallery-note">
+      <p>
+        Tu pourras remplacer progressivement les images d’exemple par tes vraies photos. Je te conseille de garder une sélection resserrée, avec uniquement les plus belles vues et les photos les plus utiles pour aider les voyageurs à comprendre le lieu.
+      </p>
+    </div>
+
+    <section class="gallery-grid" id="galleryGrid">
+      <button
+        class="gallery-item large"
+        data-category="ensemble"
+        data-src="images/maison-ensemble.jpg"
+        data-title="Vue d’ensemble de la propriété"
+        data-kicker="Vue d’ensemble"
+        data-description="Une première lecture du lieu, de son ambiance générale et de son implantation sur la propriété."
+      >
+        <img src="images/maison-ensemble.jpg" alt="Vue d’ensemble de la propriété MUSARDE">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">
+            <span>Vue d’ensemble</span>
+            <strong>La propriété MUSARDE</strong>
+          </div>
+        </div>
+      </button>
+
+      <button
+        class="gallery-item"
+        data-category="communs"
+        data-src="images/exterieur-1.jpg"
+        data-title="Le terrain et les abords"
+        data-kicker="Extérieurs & espaces communs"
+        data-description="Une vue d’ambiance pour montrer l’espace, la respiration et le cadre naturel."
+      >
+        <img src="images/exterieur-1.jpg" alt="Terrain et extérieurs de MUSARDE">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">
+            <span>Extérieurs</span>
+            <strong>Le terrain</strong>
+          </div>
+        </div>
+      </button>
+
+      <button
+        class="gallery-item tall"
+        data-category="communs"
+        data-src="images/exterieur-2.jpg"
+        data-title="Espace commun extérieur"
+        data-kicker="Extérieurs & espaces communs"
+        data-description="Un aperçu d’un espace partagé pensé pour les repas, la détente ou les moments simples en extérieur."
+      >
+        <img src="images/exterieur-2.jpg" alt="Espace commun extérieur">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">
+            <span>Espaces communs</span>
+            <strong>Un lieu pour ralentir</strong>
+          </div>
+        </div>
+      </button>
+
+      <button
+        class="gallery-item"
+        data-category="dune"
+        data-src="images/logement-dune-1.jpg"
+        data-title="Logement Dune"
+        data-kicker="Dune"
+        data-description="Une première image représentative du logement Dune, à remplacer par une photo forte de la pièce de vie ou de la façade."
+      >
+        <img src="images/logement-dune-1.jpg" alt="Logement Dune">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">
+            <span>Dune</span>
+            <strong>Ambiance du logement</strong>
+          </div>
+        </div>
+      </button>
+
+      <button
+        class="gallery-item large"
+        data-category="dune"
+        data-src="images/logement-dune-2.jpg"
+        data-title="Pièce principale du logement Dune"
+        data-kicker="Dune"
+        data-description="Une photo d’ensemble pour permettre au voyageur de comprendre immédiatement l’esprit et le confort du logement."
+      >
+        <img src="images/logement-dune-2.jpg" alt="Pièce principale du logement Dune">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">
+            <span>Dune</span>
+            <strong>Pièce principale</strong>
+          </div>
+        </div>
+      </button>
+
+      <button
+        class="gallery-item"
+        data-category="pin"
+        data-src="images/logement-pin-1.jpg"
+        data-title="Logement Pin"
+        data-kicker="Pin"
+        data-description="Une image principale du logement Pin pour identifier tout de suite son ambiance et son style."
+      >
+        <img src="images/logement-pin-1.jpg" alt="Logement Pin">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">
+            <span>Pin</span>
+            <strong>Vue du logement</strong>
+          </div>
+        </div>
+      </button>
+
+      <button
+        class="gallery-item"
+        data-category="pin"
+        data-src="images/logement-pin-2.jpg"
+        data-title="Détail du logement Pin"
+        data-kicker="Pin"
+        data-description="Une photo complémentaire pour montrer une pièce, une terrasse ou une atmosphère particulière."
+      >
+        <img src="images/logement-pin-2.jpg" alt="Détail du logement Pin">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">
+            <span>Pin</span>
+            <strong>Ambiance intérieure</strong>
+          </div>
+        </div>
+      </button>
+
+      <button
+        class="gallery-item large"
+        data-category="kbane"
+        data-src="images/logement-kbane-1.jpg"
+        data-title="Logement Kbane"
+        data-kicker="Kbane"
+        data-description="Une vue principale du logement Kbane, utile pour bien distinguer cette unité des deux autres."
+      >
+        <img src="images/logement-kbane-1.jpg" alt="Logement Kbane">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">
+            <span>Kbane</span>
+            <strong>Le logement indépendant</strong>
+          </div>
+        </div>
+      </button>
+
+      <button
+        class="gallery-item"
+        data-category="kbane"
+        data-src="images/logement-kbane-2.jpg"
+        data-title="Détail du logement Kbane"
+        data-kicker="Kbane"
+        data-description="Une image complémentaire pour montrer l’agencement, le couchage ou un détail important."
+      >
+        <img src="images/logement-kbane-2.jpg" alt="Détail du logement Kbane">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">
+            <span>Kbane</span>
+            <strong>Esprit du lieu</strong>
+          </div>
+        </div>
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>© MUSARDE – Maison de vacances à Ychoux</p>
+      <p class="footer-signature">Une maison pour ralentir</p>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">✕</button>
+      <button class="lightbox-prev" id="lightboxPrev" aria-label="Image précédente">←</button>
+      <button class="lightbox-next" id="lightboxNext" aria-label="Image suivante">→</button>
+
+      <div class="lightbox-image-wrap">
+        <img class="lightbox-image" id="lightboxImage" src="" alt="">
+      </div>
+
+      <div class="lightbox-caption">
+        <span class="lightbox-kicker" id="lightboxKicker"></span>
+        <strong id="lightboxTitle"></strong>
+        <p id="lightboxDescription"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.gallery-filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        galleryItems.forEach((item) => {
+          const category = item.dataset.category;
+          const show = filter === 'all' || category === filter;
+          item.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxKicker = document.getElementById('lightboxKicker');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxDescription = document.getElementById('lightboxDescription');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+
+    let visibleItems = [];
+    let currentIndex = 0;
+
+    function getVisibleItems() {
+      return [...galleryItems].filter((item) => item.style.display !== 'none');
+    }
+
+    function updateLightbox(index) {
+      visibleItems = getVisibleItems();
+      if (!visibleItems.length) return;
+
+      currentIndex = (index + visibleItems.length) % visibleItems.length;
+      const item = visibleItems[currentIndex];
+
+      lightboxImage.src = item.dataset.src;
+      lightboxImage.alt = item.querySelector('img').alt;
+      lightboxKicker.textContent = item.dataset.kicker || '';
+      lightboxTitle.textContent = item.dataset.title || '';
+      lightboxDescription.textContent = item.dataset.description || '';
+    }
+
+    function openLightbox(item) {
+      visibleItems = getVisibleItems();
+      currentIndex = visibleItems.indexOf(item);
+      updateLightbox(currentIndex);
+      lightbox.classList.add('active');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    galleryItems.forEach((item) => {
+      item.addEventListener('click', () => openLightbox(item));
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', () => updateLightbox(currentIndex - 1));
+    lightboxNext.addEventListener('click', () => updateLightbox(currentIndex + 1));
+
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (!lightbox.classList.contains('active')) return;
+
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowLeft') updateLightbox(currentIndex - 1);
+      if (event.key === 'ArrowRight') updateLightbox(currentIndex + 1);
+    });
+  </script>
+
+</body>
+</html>
