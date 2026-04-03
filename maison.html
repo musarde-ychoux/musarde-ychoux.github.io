@@ -8,81 +8,66 @@
 
   <style>
     .house-intro {
-      max-width: 920px;
+      max-width: 980px;
     }
 
     .section-block {
-      margin-top: 72px;
+      margin-top: 54px;
+    }
+
+    .first-section {
+      margin-top: 0;
     }
 
     .section-block h2 {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .section-block > p {
       max-width: 980px;
-      margin-bottom: 26px;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
-    }
-
-    .info-card {
-      background: var(--blanc-casse);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: var(--ombre-legere);
-      border: 1px solid rgba(47, 62, 52, 0.06);
-    }
-
-    .info-card h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      color: var(--vert-pin);
-      font-size: 1.2rem;
-    }
-
-    .info-card p {
-      margin: 0;
+      margin-bottom: 22px;
     }
 
     .overview-layout {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: minmax(0; 1.65fr) minmax(280px; 0.95fr);
       gap: 28px;
       align-items: stretch;
     }
 
-    .hero-card {
+    .hero-card,
+    .summary-box,
+    .common-card,
+    .lodging-card,
+    .cta-section {
       background: var(--blanc-casse);
       border-radius: 24px;
-      overflow: hidden;
       box-shadow: var(--ombre-legere);
       border: 1px solid rgba(47, 62, 52, 0.06);
-      display: flex;
-      flex-direction: column;
+    }
+
+    .hero-card {
+      overflow: hidden;
     }
 
     .hero-image {
       width: 100%;
-      height: 360px;
+      height: 340px;
       object-fit: cover;
       display: block;
       background: #d9dedb;
     }
 
     .hero-content {
-      padding: 26px;
+      padding: 26px 26px 28px;
     }
 
     .hero-content h3 {
       margin-top: 0;
       margin-bottom: 14px;
       color: var(--vert-pin);
-      font-size: 1.5rem;
+      font-size: 1.95rem;
+      line-height: 1.1;
     }
 
     .hero-content p {
@@ -90,63 +75,68 @@
     }
 
     .summary-box {
-      background: var(--blanc-casse);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: var(--ombre-legere);
-      border: 1px solid rgba(47, 62, 52, 0.06);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      padding: 26px;
     }
 
     .summary-box h3 {
       margin-top: 0;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       color: var(--vert-pin);
-      font-size: 1.45rem;
+      font-size: 1.9rem;
+      line-height: 1.1;
     }
 
     .summary-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: flex;
       flex-direction: column;
       gap: 14px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
     }
 
     .summary-list li {
+      background: rgba(47, 62, 52, 0.05);
+      border-radius: 16px;
       padding: 14px 16px;
-      border-radius: 14px;
-      background: rgba(122, 144, 150, 0.10);
-      font-weight: 600;
+      font-weight: 700;
       color: var(--vert-pin);
     }
 
-    .highlight-note {
-      margin-top: 28px;
-      background: rgba(255, 255, 255, 0.34);
-      border-radius: 18px;
-      padding: 24px;
-      border-left: 4px solid var(--soleil);
+    .common-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
 
-    .highlight-note p {
+    .common-card {
+      padding: 24px 22px;
+    }
+
+    .common-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: var(--vert-pin);
+      font-size: 1.7rem;
+      line-height: 1.15;
+    }
+
+    .common-card p {
       margin: 0;
     }
 
-    .filter-menu {
+    .lodging-filter-menu {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 28px;
+      margin-top: 14px;
+      margin-bottom: 26px;
     }
 
-    .filter-btn {
+    .lodging-filter-btn {
       border: none;
       cursor: pointer;
-      padding: 12px 18px;
+      padding: 11px 18px;
       border-radius: 999px;
       background: var(--blanc-casse);
       color: var(--vert-pin);
@@ -154,52 +144,53 @@
       box-shadow: var(--ombre-legere);
       font-weight: 700;
       font-size: 0.98rem;
-      transition: 0.25s ease;
       font-family: inherit;
+      transition: 0.25s ease;
     }
 
-    .filter-btn:hover {
-      background: rgba(217, 184, 106, 0.20);
+    .lodging-filter-btn:hover {
+      background: rgba(217, 184, 106, 0.18);
       transform: translateY(-1px);
     }
 
-    .filter-btn.active {
+    .lodging-filter-btn.active {
       background: var(--soleil);
       color: var(--vert-pin);
       box-shadow: 0 8px 22px rgba(47, 62, 52, 0.12);
     }
 
-    .filter-btn:focus-visible,
+    .lodging-filter-btn:focus-visible,
     .cta-button:focus-visible {
       outline: 3px solid rgba(217, 184, 106, 0.45);
       outline-offset: 3px;
     }
 
     .lodgings-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
 
     .lodging-card {
-      background: var(--blanc-casse);
-      border-radius: 24px;
       overflow: hidden;
-      box-shadow: var(--ombre-legere);
-      border: 1px solid rgba(47, 62, 52, 0.06);
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 360px 1fr;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .lodging-card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-2px);
       box-shadow: 0 16px 34px rgba(47, 62, 52, 0.12);
+    }
+
+    .lodging-card.hidden {
+      display: none;
     }
 
     .lodging-image {
       width: 100%;
-      height: 230px;
+      height: 100%;
+      min-height: 270px;
       object-fit: cover;
       display: block;
       background: #d9dedb;
@@ -210,14 +201,13 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
-      height: 100%;
     }
 
     .lodging-content h3 {
       margin: 0;
       color: var(--vert-pin);
-      font-size: 1.7rem;
-      line-height: 1.15;
+      font-size: 2rem;
+      line-height: 1.08;
     }
 
     .lodging-tags {
@@ -241,10 +231,10 @@
     }
 
     .lodging-tip {
-      margin: 0;
+      margin: 4px 0 0 0;
       padding: 14px 16px;
       border-radius: 14px;
-      background: rgba(217, 184, 106, 0.12);
+      background: rgba(217, 184, 106, 0.10);
       border-left: 4px solid var(--soleil);
     }
 
@@ -252,102 +242,114 @@
       color: var(--vert-pin);
     }
 
-    .lodging-actions {
-      margin-top: auto;
+    .cta-section {
+      margin-top: 34px;
+      padding: 32px 28px;
+      border-left: 4px solid var(--soleil);
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .cta-text h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: var(--vert-pin);
+      font-size: 1.95rem;
+      line-height: 1.1;
+    }
+
+    .cta-text p {
+      margin: 0;
+      max-width: 820px;
     }
 
     .cta-button {
       display: inline-block;
-      padding: 12px 16px;
-      border-radius: 12px;
+      padding: 14px 20px;
+      border-radius: 14px;
       background: rgba(47, 62, 52, 0.08);
       color: var(--vert-pin);
       font-weight: 700;
-      font-size: 0.95rem;
-      text-align: center;
+      white-space: nowrap;
       transition: 0.25s ease;
+      text-align: center;
     }
 
     .cta-button:hover {
       background: var(--soleil);
       color: var(--vert-pin);
       transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     }
 
-    .cta-section {
-      margin-top: 72px;
-      background: var(--blanc-casse);
-      border-radius: 24px;
-      padding: 34px 30px;
-      box-shadow: var(--ombre-legere);
-      border: 1px solid rgba(47, 62, 52, 0.06);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .cta-section h3 {
-      margin: 0 0 10px 0;
-      color: var(--vert-pin);
-      font-size: 1.45rem;
-    }
-
-    .cta-section p {
-      margin: 0;
-      max-width: 760px;
-    }
-
-    .lodging-item {
-      display: block;
-    }
-
-    .lodging-item.hidden {
-      display: none;
-    }
-
-    @media (max-width: 980px) {
+    @media (max-width: 1100px) {
       .overview-layout {
         grid-template-columns: 1fr;
       }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
+      .hero-image {
+        height: 290px;
+      }
+
+      .lodging-card {
+        grid-template-columns: 1fr;
+      }
+
+      .lodging-image {
+        min-height: 230px;
+      }
+
       .cta-section {
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .cta-button {
+        width: 100%;
+      }
     }
 
     @media (max-width: 640px) {
-      .filter-menu {
+      .section-block {
+        margin-top: 44px;
+      }
+
+      .hero-content,
+      .summary-box,
+      .common-card,
+      .lodging-content,
+      .cta-section {
+        padding: 22px 20px;
+      }
+
+      .hero-content h3,
+      .summary-box h3,
+      .cta-text h3,
+      .lodging-content h3 {
+        font-size: 1.7rem;
+      }
+
+      .common-card h3 {
+        font-size: 1.45rem;
+      }
+
+      .lodging-filter-menu {
         gap: 10px;
       }
 
-      .filter-btn {
+      .lodging-filter-btn {
         width: 100%;
         text-align: center;
       }
 
       .hero-image,
       .lodging-image {
-        height: 210px;
-      }
-
-      .hero-content,
-      .summary-box,
-      .info-card,
-      .lodging-content,
-      .cta-section {
-        padding: 22px;
-      }
-
-      .lodging-content h3 {
-        font-size: 1.5rem;
+        height: 220px;
+        min-height: unset;
       }
     }
   </style>
@@ -369,24 +371,17 @@
   </div>
 
   <main>
-    <div class="page-header">
+    <section class="section-block first-section">
       <h1>La maison</h1>
       <p class="house-intro">
         MUSARDE réunit trois logements indépendants au sein d’une même propriété, dans un cadre calme, arboré et pensé pour des séjours simples, confortables et apaisants. Cette page permet de découvrir l’esprit du lieu, les extérieurs et les différents hébergements.
-      </p>
-    </div>
-
-    <section class="section-block">
-      <h2>Vue d’ensemble</h2>
-      <p>
-        Un lieu de séjour conçu pour profiter du calme landais, d’un grand terrain et d’une organisation souple, que l’on vienne en couple, en famille ou à plusieurs.
       </p>
 
       <div class="overview-layout">
         <article class="hero-card">
           <img class="hero-image" src="images/maison-ensemble.jpg" alt="Vue d’ensemble de la propriété MUSARDE">
           <div class="hero-content">
-            <h3>Une propriété pensée pour respirer</h3>
+            <h2>Une propriété pensée pour respirer</h2>
             <p>
               La propriété accueille trois logements distincts au sein d’un même ensemble. L’ambiance générale privilégie l’espace, la tranquillité et un rapport simple aux extérieurs, avec de belles possibilités de circulation, de détente et de stationnement.
             </p>
@@ -394,7 +389,7 @@
         </article>
 
         <aside class="summary-box">
-          <h3>En bref</h3>
+          <h2>En bref</h2>
           <ul class="summary-list">
             <li>Capacité totale : jusqu’à XX personnes</li>
             <li>3 logements indépendants</li>
@@ -404,12 +399,6 @@
           </ul>
         </aside>
       </div>
-
-      <div class="highlight-note">
-        <p>
-          Cette page présente l’essentiel de la propriété et des logements. Les informations pratiques détaillées, les règles du séjour et le fonctionnement précis des équipements seront regroupés dans la page <strong>Informations</strong>.
-        </p>
-      </div>
     </section>
 
     <section class="section-block">
@@ -418,29 +407,29 @@
         Les extérieurs participent pleinement à l’expérience du séjour. Le lieu a été pensé pour offrir de l’espace, une ambiance calme et une vraie sensation de respiration autour des logements.
       </p>
 
-      <div class="info-grid">
-        <article class="info-card">
+      <div class="common-grid">
+        <article class="common-card">
           <h3>Grand terrain</h3>
           <p>
             Une propriété spacieuse permettant de profiter pleinement de l’environnement, avec une belle sensation d’ouverture et de tranquillité.
           </p>
         </article>
 
-        <article class="info-card">
+        <article class="common-card">
           <h3>Ambiance naturelle</h3>
           <p>
             Un cadre arboré et apaisant, propice au repos, aux séjours en famille et aux moments simples en extérieur.
           </p>
         </article>
 
-        <article class="info-card">
+        <article class="common-card">
           <h3>Espaces de détente</h3>
           <p>
             Des extérieurs pensés pour ralentir, prendre un repas dehors, lire, discuter ou simplement profiter du calme.
           </p>
         </article>
 
-        <article class="info-card">
+        <article class="common-card">
           <h3>Stationnement</h3>
           <p>
             Le stationnement s’effectue directement sur la propriété, dans des conditions simples et pratiques pour les voyageurs.
@@ -455,15 +444,15 @@
         Les trois logements permettent d’adapter le séjour selon les besoins, les envies et la composition du groupe. Chaque espace possède sa propre identité et son propre fonctionnement.
       </p>
 
-      <div class="filter-menu">
-        <button class="filter-btn active" data-filter="all">Tous</button>
-        <button class="filter-btn" data-filter="dune">Dune</button>
-        <button class="filter-btn" data-filter="pin">Pin</button>
-        <button class="filter-btn" data-filter="kbane">Kbane</button>
+      <div class="lodging-filter-menu">
+        <button class="lodging-filter-btn active" data-filter="all">Tous</button>
+        <button class="lodging-filter-btn" data-filter="dune">Dune</button>
+        <button class="lodging-filter-btn" data-filter="pin">Pin</button>
+        <button class="lodging-filter-btn" data-filter="kbane">Kbane</button>
       </div>
 
       <div class="lodgings-grid">
-        <article class="lodging-card lodging-item dune">
+        <article class="lodging-card" data-category="dune">
           <img class="lodging-image" src="images/logement-dune.jpg" alt="Logement Dune">
           <div class="lodging-content">
             <h3>Dune</h3>
@@ -481,15 +470,10 @@
             <p class="lodging-tip">
               <strong>Astuce :</strong> idéal pour un séjour principal avec un bon niveau de confort et un accès pratique aux extérieurs.
             </p>
-
-            <div class="lodging-actions">
-              <a href="galerie.html" class="cta-button">Voir les photos</a>
-              <a href="informations.html" class="cta-button">Voir les informations</a>
-            </div>
           </div>
         </article>
 
-        <article class="lodging-card lodging-item pin">
+        <article class="lodging-card" data-category="pin">
           <img class="lodging-image" src="images/logement-pin.jpg" alt="Logement Pin">
           <div class="lodging-content">
             <h3>Pin</h3>
@@ -507,15 +491,10 @@
             <p class="lodging-tip">
               <strong>Astuce :</strong> parfait pour ceux qui recherchent une ambiance conviviale et un hébergement facile à vivre au quotidien.
             </p>
-
-            <div class="lodging-actions">
-              <a href="galerie.html" class="cta-button">Voir les photos</a>
-              <a href="informations.html" class="cta-button">Voir les informations</a>
-            </div>
           </div>
         </article>
 
-        <article class="lodging-card lodging-item kbane">
+        <article class="lodging-card" data-category="kbane">
           <img class="lodging-image" src="images/logement-kbane.jpg" alt="Logement Kbane">
           <div class="lodging-content">
             <h3>Kbane</h3>
@@ -533,18 +512,13 @@
             <p class="lodging-tip">
               <strong>Astuce :</strong> très bien pour un couple, une petite unité familiale ou comme logement complémentaire dans un séjour à plusieurs.
             </p>
-
-            <div class="lodging-actions">
-              <a href="galerie.html" class="cta-button">Voir les photos</a>
-              <a href="informations.html" class="cta-button">Voir les informations</a>
-            </div>
           </div>
         </article>
       </div>
     </section>
 
     <section class="cta-section">
-      <div>
+      <div class="cta-text">
         <h3>Besoin de plus de détails ?</h3>
         <p>
           Les horaires d’arrivée et de départ, les règles du séjour, les équipements détaillés et les informations pratiques seront regroupés dans une page dédiée pour garder cette présentation claire et agréable à parcourir.
@@ -554,7 +528,7 @@
     </section>
 
     <section class="cta-section">
-      <div>
+      <div class="cta-text">
         <h3>Découvrir le lieu en images</h3>
         <p>
           La galerie photo permettra de distinguer les photos des extérieurs, des espaces communs et de chacun des trois logements, pour que chaque voyageur puisse se repérer immédiatement.
@@ -572,30 +546,28 @@
   </footer>
 
   <script>
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const lodgingItems = document.querySelectorAll('.lodging-item');
+    const lodgingFilterButtons = document.querySelectorAll('.lodging-filter-btn');
+    const lodgingCards = document.querySelectorAll('.lodging-card');
 
-    function filterLodgings(filterValue) {
-      filterButtons.forEach((button) => {
-        button.classList.toggle('active', button.dataset.filter === filterValue);
+    function filterLodgings(filter) {
+      lodgingFilterButtons.forEach((button) => {
+        button.classList.toggle('active', button.dataset.filter === filter);
       });
 
-      lodgingItems.forEach((item) => {
-        const shouldShow = filterValue === 'all' || item.classList.contains(filterValue);
-        item.classList.toggle('hidden', !shouldShow);
+      lodgingCards.forEach((card) => {
+        const category = card.dataset.category;
+        const shouldShow = filter === 'all' || category === filter;
+        card.classList.toggle('hidden', !shouldShow);
       });
     }
 
-    filterButtons.forEach((button) => {
+    lodgingFilterButtons.forEach((button) => {
       button.addEventListener('click', () => {
         filterLodgings(button.dataset.filter);
       });
     });
 
-    const defaultButton = document.querySelector('.filter-btn.active');
-    if (defaultButton) {
-      filterLodgings(defaultButton.dataset.filter);
-    }
+    filterLodgings('all');
   </script>
 
 </body>
