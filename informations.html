@@ -7,68 +7,131 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
+    .info-hero {
+      padding: 28px 0 16px 0;
+    }
+
+    .info-hero h1 {
+      margin-bottom: 12px;
+    }
+
+    .info-intro {
+      max-width: 900px;
+      margin: 0;
+    }
+
     .info-section {
-      margin-bottom: 60px;
+      margin-top: 18px;
     }
 
     .info-section h2 {
-      margin-bottom: 16px;
+      margin-bottom: 12px;
+    }
+
+    .info-section > p {
+      max-width: 900px;
+      margin-top: 0;
+      margin-bottom: 18px;
     }
 
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
     }
 
     .info-card {
       background: var(--blanc-casse);
-      padding: 20px;
-      border-radius: 16px;
+      border-radius: 20px;
+      padding: 22px;
       box-shadow: var(--ombre-legere);
+      border: 1px solid rgba(47, 62, 52, 0.06);
     }
 
-    .logement {
+    .info-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: var(--vert-pin);
+      font-size: 1.25rem;
+      line-height: 1.25;
+    }
+
+    .info-card p {
+      margin: 0;
+    }
+
+    .info-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .info-list li {
+      margin-bottom: 8px;
+    }
+
+    .note-box {
+      margin-top: 22px;
       background: var(--blanc-casse);
       border-radius: 20px;
       padding: 24px;
-      margin-bottom: 30px;
+      border-left: 5px solid var(--soleil);
       box-shadow: var(--ombre-legere);
     }
 
-    .logement h3 {
+    .note-box h3 {
       margin-top: 0;
+      margin-bottom: 10px;
       color: var(--vert-pin);
     }
 
-    .logement-meta {
+    .note-box p {
+      margin: 0;
+      max-width: 920px;
+    }
+
+    .cta-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 12px;
+      gap: 16px;
+      margin-top: 26px;
     }
 
-    .tag {
-      background: rgba(122, 144, 150, 0.15);
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-    .cta-box {
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    .cta-box a {
+    .cta-link {
       display: inline-block;
       padding: 12px 18px;
-      border-radius: 10px;
-      background: var(--soleil);
+      border-radius: 12px;
+      background: rgba(47, 62, 52, 0.08);
       color: var(--vert-pin);
       font-weight: 600;
-      text-decoration: none;
+      transition: 0.25s ease;
+    }
+
+    .cta-link:hover {
+      background: var(--soleil);
+      color: var(--vert-pin);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 640px) {
+      .info-hero {
+        padding-top: 22px;
+      }
+
+      .info-card {
+        padding: 20px;
+      }
+
+      .note-box {
+        padding: 20px;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .cta-link {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -77,7 +140,7 @@
 
   <div class="topbar">
     <div class="topbar-inner">
-      <a href="index.html" class="logo">La Musarde</a>
+      <a href="index.html" class="logo">LA MUSARDE</a>
       <nav>
         <a href="index.html">Accueil</a>
         <a href="maison.html">Maison</a>
@@ -91,145 +154,108 @@
 
   <main>
 
-    <div class="page-header">
+    <section class="info-hero">
       <h1>Informations</h1>
-      <p>
-        Retrouvez ici les informations essentielles sur les logements, les équipements et l’organisation du séjour.
+      <p class="info-intro">
+        Retrouve ici les informations pratiques essentielles pour préparer sereinement ton séjour à La Musarde, sans doublon avec la présentation de la maison et des logements.
       </p>
-    </div>
-
-    <!-- Vue d'ensemble -->
-    <section class="info-section">
-      <h2>Vue d’ensemble</h2>
-      <p>
-        MUSARDE se compose de trois logements indépendants situés sur une même propriété, au cœur d’un environnement calme et naturel.
-      </p>
-
-      <div class="info-grid">
-        <div class="info-card">
-          <strong>Capacité totale</strong>
-          <p>Jusqu’à XX personnes</p>
-        </div>
-
-        <div class="info-card">
-          <strong>Nombre de logements</strong>
-          <p>3 logements indépendants</p>
-        </div>
-
-        <div class="info-card">
-          <strong>Environnement</strong>
-          <p>Terrain spacieux, calme et arboré</p>
-        </div>
-      </div>
     </section>
 
-    <!-- Extérieurs -->
-    <section class="info-section">
-      <h2>Extérieurs & espaces communs</h2>
-
-      <div class="info-grid">
-        <div class="info-card">Grand terrain</div>
-        <div class="info-card">Espace détente</div>
-        <div class="info-card">Stationnement sur place</div>
-        <div class="info-card">Mobilier extérieur</div>
-      </div>
-    </section>
-
-    <!-- Logements -->
-    <section class="info-section">
-      <h2>Les logements</h2>
-
-      <div class="logement">
-        <h3>Dune</h3>
-        <div class="logement-meta">
-          <span class="tag">X personnes</span>
-          <span class="tag">X chambres</span>
-          <span class="tag">Cuisine équipée</span>
-        </div>
-        <p>
-          Logement confortable et lumineux, idéal pour un séjour en famille ou entre amis, avec un accès direct aux extérieurs.
-        </p>
-      </div>
-
-      <div class="logement">
-        <h3>Pin</h3>
-        <div class="logement-meta">
-          <span class="tag">X personnes</span>
-          <span class="tag">X chambres</span>
-          <span class="tag">Terrasse</span>
-        </div>
-        <p>
-          Un espace chaleureux et fonctionnel, parfait pour profiter d’un séjour simple et agréable dans un cadre naturel.
-        </p>
-      </div>
-
-      <div class="logement">
-        <h3>Kbane</h3>
-        <div class="logement-meta">
-          <span class="tag">X personnes</span>
-          <span class="tag">Studio / T2</span>
-          <span class="tag">Indépendant</span>
-        </div>
-        <p>
-          Logement indépendant, idéal pour un séjour plus intime ou pour compléter la capacité globale de la propriété.
-        </p>
-      </div>
-
-    </section>
-
-    <!-- Équipements -->
     <section class="info-section">
       <h2>Équipements</h2>
 
       <div class="info-grid">
         <div class="info-card">
-          <strong>Confort</strong>
-          <p>WiFi, chauffage, équipements de base</p>
+          <h3>Confort</h3>
+          <p>
+            WiFi, chauffage, équipements du quotidien et éléments de base pour un séjour simple et agréable.
+          </p>
         </div>
 
         <div class="info-card">
-          <strong>Cuisine</strong>
-          <p>Vaisselle, électroménager, cafetière</p>
+          <h3>Cuisine</h3>
+          <p>
+            Vaisselle, électroménager, cafetière et équipements utiles pour préparer les repas sur place.
+          </p>
         </div>
 
         <div class="info-card">
-          <strong>Pratique</strong>
-          <p>Linge de maison, rangement, etc.</p>
+          <h3>Pratique</h3>
+          <p>
+            Rangements, linge selon l’organisation retenue, et équipements pensés pour faciliter le séjour.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Infos pratiques -->
     <section class="info-section">
       <h2>Informations pratiques</h2>
 
       <div class="info-grid">
         <div class="info-card">
-          <strong>Arrivée</strong>
+          <h3>Arrivée</h3>
           <p>À partir de XXh</p>
         </div>
 
         <div class="info-card">
-          <strong>Départ</strong>
+          <h3>Départ</h3>
           <p>Avant XXh</p>
         </div>
 
         <div class="info-card">
-          <strong>Stationnement</strong>
-          <p>Sur place</p>
+          <h3>Stationnement</h3>
+          <p>Stationnement sur place, pratique pour accéder facilement à la propriété.</p>
         </div>
 
         <div class="info-card">
-          <strong>Règles</strong>
-          <p>Logement non-fumeur</p>
+          <h3>Règles</h3>
+          <p>Logement non-fumeur et respect du calme du lieu demandé pendant le séjour.</p>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <div class="cta-box">
-      <a href="galerie.html">Voir les photos</a>
-    </div>
+    <section class="info-section">
+      <h2>Accès & situation</h2>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Gare d’Ychoux</h3>
+          <p>
+            La présence de la gare d’Ychoux constitue un vrai atout pour rejoindre facilement La Musarde et se déplacer dans le secteur.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Accès en voiture</h3>
+          <p>
+            La maison est facilement accessible en voiture, avec une situation pratique pour rayonner vers les lacs, l’océan et les communes voisines.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Un emplacement pratique</h3>
+          <p>
+            Ychoux permet de rejoindre rapidement Parentis-en-Born, Biscarrosse, Sanguinet ou Mimizan tout en profitant d’un cadre plus calme.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>À prévoir plus tard</h2>
+
+      <div class="note-box">
+        <h3>Guide pratique du séjour</h3>
+        <p>
+          Les informations plus techniques, comme l’utilisation de la télévision, le fonctionnement de certains équipements, le changement d’une bouteille de gaz, les consignes de départ ou le tri des déchets, pourront être regroupées plus tard dans une page dédiée ou dans un guide d’accueil séparé.
+        </p>
+      </div>
+
+      <div class="cta-row">
+        <a href="maison.html" class="cta-link">Voir la maison</a>
+        <a href="galerie.html" class="cta-link">Voir la galerie photo</a>
+      </div>
+    </section>
 
   </main>
 
