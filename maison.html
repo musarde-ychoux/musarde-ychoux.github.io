@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>La maison | La Musarde</title>
+
 <link rel="stylesheet" href="style.css" />
 
 <style>
@@ -43,7 +44,7 @@
 
 .hero-image {
   width: 100%;
-  height: 260px; /* réduit */
+  height: 260px;
   object-fit: cover;
 }
 
@@ -66,18 +67,33 @@
   font-weight: 600;
 }
 
-/* COMMUN */
-.common-grid {
+/* INFORMATIONS ESSENTIELLES */
+.info-simple-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
 }
 
-.common-card {
-  padding: 18px;
+.info-simple-card {
+  padding: 20px;
   border-radius: 18px;
   background: var(--blanc-casse);
   box-shadow: var(--ombre-legere);
+}
+
+.info-simple-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--vert-pin);
+}
+
+.info-simple-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.info-simple-card li {
+  margin-bottom: 6px;
 }
 
 /* LOGEMENTS */
@@ -85,6 +101,7 @@
   display: flex;
   gap: 10px;
   margin-bottom: 18px;
+  flex-wrap: wrap;
 }
 
 .lodging-filter-btn {
@@ -95,6 +112,7 @@
   background: var(--blanc-casse);
   box-shadow: var(--ombre-legere);
   font-weight: 600;
+  transition: 0.25s ease;
 }
 
 .lodging-filter-btn.active {
@@ -124,6 +142,11 @@
 
 .lodging-content {
   padding: 18px;
+}
+
+.lodging-content h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .lodging-tags {
@@ -158,10 +181,12 @@
   border-radius: 10px;
   background: rgba(47,62,52,0.08);
   font-weight: 600;
+  transition: 0.25s ease;
 }
 
 .cta-button:hover {
   background: var(--soleil);
+  color: var(--vert-pin);
 }
 
 .overview-layout {
@@ -171,9 +196,10 @@
 .section-block:first-of-type {
   padding-bottom: 10px;
 }
-  
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
+
   .overview-layout {
     grid-template-columns: 1fr;
   }
@@ -183,8 +209,9 @@
   }
 
   .hero-image {
-    height: 200px;
+    height: 220px;
   }
+
 }
 
 </style>
@@ -195,6 +222,7 @@
 <div class="topbar">
   <div class="topbar-inner">
     <a href="index.html" class="logo">LA MUSARDE</a>
+
     <nav>
       <a href="index.html">Accueil</a>
       <a href="maison.html" class="active">Maison</a>
@@ -210,7 +238,9 @@
 
 <!-- INTRO -->
 <section class="section-block first-section">
+
   <h2>La maison</h2>
+
   <p>
     La Musarde réunit trois logements indépendants au sein d’une même propriété, dans un cadre calme, arboré et pensé pour des séjours confortables et apaisants.
   </p>
@@ -219,8 +249,10 @@
 
     <div class="hero-card">
       <img src="images/photos/musarde2.jpg" class="hero-image">
+
       <div class="hero-content">
         <h3>Une propriété pensée pour respirer</h3>
+
         <p>
           Un lieu privilégiant l’espace, la tranquillité et la simplicité, avec de nombreuses possibilités de détente et de circulation.
         </p>
@@ -229,6 +261,7 @@
 
     <div class="summary-box">
       <h3>En bref</h3>
+
       <ul class="summary-list">
         <li>Grand terrain arboré de 5 547 m²</li>
         <li>3 logements indépendants</li>
@@ -240,10 +273,57 @@
     </div>
 
   </div>
+
+</section>
+
+<!-- INFORMATIONS -->
+<section class="section-block">
+
+  <h2>Informations essentielles</h2>
+
+  <div class="info-simple-grid">
+
+    <div class="info-simple-card">
+      <h3>Ce qui est fourni</h3>
+
+      <ul>
+        <li>Fibre optique</li>
+        <li>Chauffage</li>
+        <li>Cuisine équipée selon le logement</li>
+        <li>Vaisselle et équipements du quotidien</li>
+        <li>Stationnement sur place</li>
+      </ul>
+    </div>
+
+    <div class="info-simple-card">
+      <h3>Bon à savoir</h3>
+
+      <ul>
+        <li>La gare d’Ychoux est située à proximité</li>
+        <li>Le village dispose de commerces essentiels</li>
+        <li>Parentis-en-Born, Biscarrosse et Sanguinet sont facilement accessibles</li>
+        <li>Le terrain est grand, calme et arboré</li>
+      </ul>
+    </div>
+
+    <div class="info-simple-card">
+      <h3>Règles simples</h3>
+
+      <ul>
+        <li>Logements non-fumeurs</li>
+        <li>Respect du calme du lieu</li>
+        <li>Respect des espaces extérieurs</li>
+        <li>Animaux selon le logement concerné</li>
+      </ul>
+    </div>
+
+  </div>
+
 </section>
 
 <!-- LOGEMENTS -->
 <section class="section-block">
+
   <h2>Les logements</h2>
 
   <div class="lodging-filter-menu">
@@ -255,10 +335,15 @@
 
   <div class="lodgings-grid">
 
+    <!-- DUNE -->
     <div class="lodging-card" data-category="dune">
+
       <img src="images/photos/log1-2.PNG" class="lodging-image">
+
       <div class="lodging-content">
+
         <h3>Dune</h3>
+
         <div class="lodging-tags">
           <span class="lodging-tag">4 à 6 personnes</span>
           <span class="lodging-tag">2 chambres</span>
@@ -266,81 +351,118 @@
           <span class="lodging-tag">2 lits simples</span>
           <span class="lodging-tag">1 canapé convertible</span>
           <span class="lodging-tag">Grande terrasse aménagée</span>
-          <span class="lodging-tag">Plancha et jeux pour enfant</span>
+          <span class="lodging-tag">Plancha</span>
+          <span class="lodging-tag">Jeux pour enfant</span>
         </div>
-        <p>Grand Logement confortable et lumineux pour une famille avec des enfants.</p>
+
+        <p>
+          Grand logement confortable et lumineux, idéal pour accueillir une famille avec des enfants dans un environnement calme et agréable.
+        </p>
+
       </div>
+
     </div>
 
+    <!-- PIN -->
     <div class="lodging-card" data-category="pin">
+
       <img src="images/photos/log2-1.png" class="lodging-image">
+
       <div class="lodging-content">
+
         <h3>Pin</h3>
+
         <div class="lodging-tags">
           <span class="lodging-tag">2 personnes</span>
           <span class="lodging-tag">1 chambre</span>
-          <span class="lodging-tag">Une terrasse avec barbecue</span>
-          <span class="lodging-tag">un jardin clôturé</span>
+          <span class="lodging-tag">Terrasse</span>
+          <span class="lodging-tag">Barbecue</span>
+          <span class="lodging-tag">Jardin clôturé</span>
         </div>
-        <p>Un espace parfait pour acceuillir un couple avec un animal</p>
+
+        <p>
+          Un espace chaleureux et fonctionnel, parfait pour accueillir un couple souhaitant profiter du calme et de la nature.
+        </p>
+
       </div>
+
     </div>
 
+    <!-- KBANE -->
     <div class="lodging-card" data-category="kbane">
+
       <img src="images/photos/Kbane1.png" class="lodging-image">
+
       <div class="lodging-content">
+
         <h3>Kbane</h3>
-        <p>Logement réservé aux propriétaires.</p>
+
+        <p>
+          Logement réservé aux propriétaires.
+        </p>
+
       </div>
+
     </div>
 
   </div>
+
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
-  <div>
-    <h3>Besoin de plus de détails ?</h3>
-    <p>Retrouvez toutes les informations pratiques sur une page dédiée.</p>
-  </div>
-  <a href="informations.html" class="cta-button">Voir les informations</a>
-</section>
 
-<section class="cta-section">
   <div>
     <h3>Découvrir le lieu en images</h3>
-    <p>Accédez à la galerie complète.</p>
+
+    <p>
+      Accédez à la galerie complète pour découvrir les extérieurs et les différents logements.
+    </p>
   </div>
-  <a href="galerie.html" class="cta-button">Voir la galerie</a>
+
+  <a href="galerie.html" class="cta-button">
+    Voir la galerie
+  </a>
+
 </section>
 
 </main>
 
-<script>
-const buttons = document.querySelectorAll('.lodging-filter-btn');
-const cards = document.querySelectorAll('.lodging-card');
-
-buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    buttons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    const filter = btn.dataset.filter;
-
-    cards.forEach(card => {
-      card.style.display =
-        filter === "all" || card.dataset.category === filter
-          ? "grid"
-          : "none";
-    });
-  });
-});
-</script>
 <footer>
   <div class="footer-inner">
     <p>© La Musarde – 1605 Rte de Bourruque 40160 YCHOUX</p>
     <p class="footer-signature">Landes • Forêt • Lacs • Océan</p>
   </div>
 </footer>
+
+<script>
+
+const buttons = document.querySelectorAll('.lodging-filter-btn');
+const cards = document.querySelectorAll('.lodging-card');
+
+buttons.forEach(btn => {
+
+  btn.addEventListener('click', () => {
+
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+
+    cards.forEach(card => {
+
+      card.style.display =
+        filter === "all" || card.dataset.category === filter
+          ? "grid"
+          : "none";
+
+    });
+
+  });
+
+});
+
+</script>
+
 </body>
 </html>
